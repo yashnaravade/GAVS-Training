@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Input types</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    form {
+      /* display: flex;
+      flex-direction: column; */
+      /* align-items: center; */
+      width: 50vw;
+      margin: 0 auto;
+    }
+    label {
+      margin-top: 10px;
+    }
+    input,
+    textarea {
+      margin: 5px 0;
+      padding: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #4caf50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .button {
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <form action="form.php" method="post">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" placeholder="Enter your name" required />
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="Enter your email" required />
+
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" placeholder="Enter your password" required />
+
+    <label for="number">Number</label>
+    <input type="number" name="number" id="number" placeholder="Enter your number" required />
+
+    <label for="date">Date</label>
+    <input type="date" name="date" id="date" required />
+
+    <label for="time">Time</label>
+    <input type="time" name="time" id="time" required />
+
+    <label for="color">Color</label>
+    <input type="color" name="color" id="color" required />
+
+    <label for="range">Range</label>
+    <input type="range" name="range" id="range" required />
+
+    <label for="search">Search</label>
+    <input type="search" name="search" id="search" placeholder="Enter your search" required />
+
+    <label for="tel">Telephone</label>
+    <input type="tel" name="tel" id="tel" placeholder="Enter your telephone" required />
+
+    <label for="url">URL</label>
+    <input type="url" name="url" id="url" placeholder="Enter your URL" required />
+
+    <label for="week">Week</label>
+    <input type="week" name="week" id="week" required />
+
+    <label for="month">Month</label>
+    <input type="month" name="month" id="month" required />
+
+    <label for="address">Address</label>
+    <textarea name="address" id="address" cols="30" rows="5"></textarea>
+
+    <label>Gender</label>
+    <input type="radio" name="gender" id="male" value="male" required />
+    <label for="male">Male</label>
+    <input type="radio" name="gender" id="female" value="female" />
+    <label for="female">Female</label>
+    <input type="radio" name="gender" id="other" value="other" />
+    <label for="other">Other</label>
+
+    <label>Hobbies</label>
+    <input type="checkbox" name="hobbies[]" id="reading" value="reading" />
+    <label for="reading">Reading</label>
+    <input type="checkbox" name="hobbies[]" id="traveling" value="traveling" />
+    <label for="traveling">Traveling</label>
+    <input type="checkbox" name="hobbies[]" id="sports" value="sports" />
+    <label for="sports">Sports</label>
+    <input type="checkbox" name="hobbies[]" id="music" value="music" />
+    <label for="music">Music</label>
+
+    <div class="button">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</body>
+</html>
