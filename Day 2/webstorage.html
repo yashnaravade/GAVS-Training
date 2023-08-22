@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web storage</title>
+</head>
+<body>
+    <h2>HTML5 Web Storage</h2>
+    <p>Click the button to check the storage.</p>
+    <button onclick="checkStorage()">Try It</button>
+    <p id="storage"></p>
+
+    <script>
+        function checkStorage() {
+        if (typeof(Storage) !== "undefined") {
+            document.getElementById("storage").innerHTML = "Storage is supported by this browser.";
+        } else {
+            document.getElementById("storage").innerHTML = "Storage is not supported by this browser.";
+        }
+        }
+    </script>
+</body>
+</html>
