@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      input {
+        margin: 10px;
+      }
+      body {
+        margin: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2><b>Book details</b></h2>
+    <form>
+      ISBN&nbsp;<input type="text" name="isbn" id="isbn" /><br />
+      Title&nbsp;<input type="text" name="title" id="title" /><br />
+
+      <input type="reset" value="Reset" />&nbsp;
+      <input type="button" value="Save" onclick="saveData()" />&nbsp;<input
+        type="button"
+        value="Get"
+        onclick="getData()"
+      />
+      <br />
+      <br />
+      <div class="data" name="data">
+        <table border="1" align="center">
+          <tr>
+            <th>ISBN</th>
+            <th>Title</th>
+          </tr>
+          <tr>
+            <td id="isbn1"></td>
+            <td id="title1"></td>
+          </tr>
+        </table>
+      </div>
+    </form>
+    <script>
+      function saveData() {
+        i = document.forms[0].isbn.value;
+        t = document.forms[0].title.value;
+        console.log(i);
+        console.log(t);
+
+        localStorage.setItem(i, t);
+      }
+
+      function getData() {
+        // document.getElementById("isbn1").innerHTML = localStorage.key(0);
+        // document.getElementById("title1").innerHTML = localStorage.getItem(
+        //   localStorage.key(0)
+        // );
+
+        // for (i = 0; i < localStorage.length; i++) {
+        //   document.getElementById("isbn1").innerHTML = localStorage.key(i);
+        //   document.getElementById("title1").innerHTML = localStorage.getItem(
+        //     localStorage.key(i)
+        //   );
+        // }
+
+        // clear the data in the table before printing the data
+        document.getElementById("isbn1").innerHTML = "";
+        document.getElementById("title1").innerHTML = "";
+
+        //  without overwriting
+        for (i = 0; i < localStorage.length; i++) {
+          document.getElementById("isbn1").innerHTML += localStorage.key(i) + "<br>";
+          document.getElementById("title1").innerHTML += localStorage.getItem(
+            localStorage.key(i)
+          ) + "<br>";
+          // How does this work?
+          // First the isbn is printed and then the title is printed in the same row and then the next isbn and title are printed in the next row. This is done by the <br> tag. the += operator is used to append the data to the existing data. 
+        }
+      }
+       
+    </script>
+  </body>
+</html>
