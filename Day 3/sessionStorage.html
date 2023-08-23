@@ -88,41 +88,40 @@
     </div>
 
     <script>
-        function storeData() {
-          var name = document.getElementById("name").value;
-          var age = document.getElementById("age").value;
-    
-          if (name == "" || age == "") {
-            alert("Please enter your name and age.");
-          } else {
-            sessionStorage.setItem("name", name);
-            sessionStorage.setItem("age", age);
-            document.querySelector(".data").innerHTML =
-              "Data stored in session storage.";
-          }
-        }
-    
-        function showData() {
-          var name = sessionStorage.getItem("name");
-          var age = sessionStorage.getItem("age");
-    
-          if (!name || !age) {
-            alert("No data found in session storage.");
-            return;
-          }
-    
-          var table = document.querySelector("table");
-    
-          var newRow = table.insertRow(-1);
-          var nameCell = newRow.insertCell(0);
-          var ageCell = newRow.insertCell(1);
-    
-          nameCell.innerHTML = name;
-          ageCell.innerHTML = age;
+      function storeData() {
+        var name = document.getElementById("name").value;
+        var age = document.getElementById("age").value;
 
-            document.querySelector(".data").innerHTML = "";
-            
+        if (name == "" || age == "") {
+          alert("Please enter your name and age.");
+        } else {
+          sessionStorage.setItem("name", name);
+          sessionStorage.setItem("age", age);
+          document.querySelector(".data").innerHTML =
+            "Data stored in session storage.";
         }
-      </script>
+      }
+
+      function showData() {
+        var name = sessionStorage.getItem("name");
+        var age = sessionStorage.getItem("age");
+
+        if (!name || !age) {
+          alert("No data found in session storage.");
+          return;
+        }
+
+        var table = document.querySelector("table");
+
+        var newRow = table.insertRow(-1);
+        var nameCell = newRow.insertCell(0);
+        var ageCell = newRow.insertCell(1);
+
+        nameCell.innerHTML = name;
+        ageCell.innerHTML = age;
+
+        document.querySelector(".data").innerHTML = "";
+      }
+    </script>
   </body>
 </html>
