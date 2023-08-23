@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session Storage</title>
+
+    <style>
+      input {
+        margin: 10px;
+      }
+      body {
+        margin: 10px;
+        text-align: center;
+      }
+
+      h2 {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 2rem;
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+      }
+
+      span {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+      }
+
+      .data {
+        margin: 10px;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 70%;
+        margin: auto;
+        background-color: #f1f1c1;
+        border: 1px solid #ddd;
+      }
+      table th {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+      }
+      table td {
+        padding: 10px;
+      }
+
+      .button {
+        margin: 10px;
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Session Storage</h2>
+    <span
+      >Enter your name and age and click on the button to store the data in
+      session storage.</span
+    >
+    <br />
+    <input type="text" id="name" placeholder="Enter your name" />
+    <input type="number" id="age" placeholder="Enter your age" />
+    <br />
+    <button class="button" onclick="storeData()">Store Data</button>
+    <button class="button" onclick="showData()">Show Data</button>
+    <br />
+    <span class="data">Data will be displayed here.</span>
+    <div class="content">
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td id="name"></td>
+          <td id="age"></td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+        function storeData() {
+          var name = document.getElementById("name").value;
+          var age = document.getElementById("age").value;
+    
+          if (name == "" || age == "") {
+            alert("Please enter your name and age.");
+          } else {
+            sessionStorage.setItem("name", name);
+            sessionStorage.setItem("age", age);
+            document.querySelector(".data").innerHTML =
+              "Data stored in session storage.";
+          }
+        }
+    
+        function showData() {
+          var name = sessionStorage.getItem("name");
+          var age = sessionStorage.getItem("age");
+    
+          if (!name || !age) {
+            alert("No data found in session storage.");
+            return;
+          }
+    
+          var table = document.querySelector("table");
+    
+          var newRow = table.insertRow(-1);
+          var nameCell = newRow.insertCell(0);
+          var ageCell = newRow.insertCell(1);
+    
+          nameCell.innerHTML = name;
+          ageCell.innerHTML = age;
+
+            document.querySelector(".data").innerHTML = "";
+            
+        }
+      </script>
+  </body>
+</html>
