@@ -12,6 +12,28 @@
         margin: 10px;
         text-align: center;
       }
+
+      .data {
+        margin: 10px;
+      }
+
+      /* beautify the table */
+      table {
+        border-collapse: collapse;
+        width: 70%;
+        margin: auto;
+        background-color: #f1f1c1;
+        border: 1px solid #ddd;
+      }
+      table th {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+      }
+      table td {
+        padding: 10px;
+      }
+      
     </style>
   </head>
   <body>
@@ -70,15 +92,14 @@
 
         //  without overwriting
         for (i = 0; i < localStorage.length; i++) {
-          document.getElementById("isbn1").innerHTML += localStorage.key(i) + "<br>";
-          document.getElementById("title1").innerHTML += localStorage.getItem(
-            localStorage.key(i)
-          ) + "<br>";
+          document.getElementById("isbn1").innerHTML +=
+            localStorage.key(i) + "<br>";
+          document.getElementById("title1").innerHTML +=
+            localStorage.getItem(localStorage.key(i)) + "<br>";
           // How does this work?
-          // First the isbn is printed and then the title is printed in the same row and then the next isbn and title are printed in the next row. This is done by the <br> tag. the += operator is used to append the data to the existing data. 
+          // First the isbn is printed and then the title is printed in the same row and then the next isbn and title are printed in the next row. This is done by the <br> tag. the += operator is used to append the data to the existing data.
         }
       }
-       
     </script>
   </body>
 </html>
