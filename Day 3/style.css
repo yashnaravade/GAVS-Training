@@ -1,0 +1,30 @@
+ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    padding: 10px;
+    border: 1px solid black;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Selects even list items */
+  li:nth-child(even) {
+    background-color: tomato;
+    color: white;
+  }
+
+  /* Selects odd list items */
+  li:nth-child(3) {
+    background-color: lightblue;
+  }
+
+  /* Selects every 3rd list item starting from the 2nd item */
+  /* li:nth-child(3n + 2) {
+    color: red;
+    font-weight: bold;
+  } */
