@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      input {
+        margin: 10px;
+      }
+      body {
+        margin: 10px;
+        text-align: center;
+      }
+
+      h2 {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 2rem;
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+      }
+
+      span {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+      }
+
+      .data {
+        margin: 10px;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 70%;
+        margin: auto;
+        background-color: #f1f1c1;
+        border: 1px solid #ddd;
+      }
+      table th {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+      }
+      table td {
+        padding: 10px;
+      }
+
+      .button {
+        margin: 10px;
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .button:hover {
+        background-color: #45a049;
+      }
+
+      .button:active {
+        background-color: #45a049;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+
+      .button:active:focus {
+        outline: none;
+      }
+
+      .button:active:hover {
+        background-color: #45a049;
+        box-shadow: 0 4px #666;
+        transform: translateY(4px);
+      }
+
+      input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+      }
+
+      input[type="text"]:focus {
+        border: 3px solid #555;
+      }
+    </style>
+  </head>
+  <body>
+    <br>
+    <h2><b>📚   Book Details 📚</b></h2>
+    <form>
+      <span>ISBN</span>
+      &nbsp;<input type="text" name="isbn" id="isbn" /><br />
+      <span>Title</span>
+      &nbsp;<input type="text" name="title" id="title" /><br />
+
+      <input type="reset" value="Reset" class="button" />&nbsp;
+      <input
+        type="button"
+        value="Save"
+        class="button"
+        onclick="saveData()"
+      />&nbsp;<input
+        type="button"
+        value="Get"
+        class="button"
+        onclick="getData()"
+      />
+      <br />
+      <br />
+      <div class="data" name="data">
+        <table border="1" align="center">
+          <tr>
+            <th>ISBN</th>
+            <th>Title</th>
+          </tr>
+          <tr>
+            <td id="isbn1"></td>
+            <td id="title1"></td>
+          </tr>
+        </table>
+      </div>
+    </form>
+    <script>
+      function saveData() {
+        i = document.forms[0].isbn.value;
+        t = document.forms[0].title.value;
+        console.log(i);
+        console.log(t);
+
+        if (i == "" || t == "") {
+          alert("Please enter the values");
+          return;
+        }
+
+        localStorage.setItem(i, t);
+      }
+
+      function getData() {
+        document.getElementById("isbn1").innerHTML = "";
+        document.getElementById("title1").innerHTML = "";
+
+        //  without overwriting
+        if (localStorage.length == 0) {
+          document.getElementById("isbn1").innerHTML = "No data found";
+          document.getElementById("title1").innerHTML = "No data found";
+        }
+
+        for (i = 0; i < localStorage.length; i++) {
+          document.getElementById("isbn1").innerHTML +=
+            localStorage.key(i) + "<br>";
+          document.getElementById("title1").innerHTML +=
+            localStorage.getItem(localStorage.key(i)) + "<br>";
+        }
+      }
+    </script>
+  </body>
+</html>
