@@ -32,4 +32,31 @@ CSS transformations allow you to move, rotate, scale, and skew elements. The tra
 - 3D Rotate
 - 3D Scale
 - 3D Translate
-- 3D Skew
+- 3D SkewG
+
+### Gradient
+
+Gradient is a smooth transition between two or more colors. CSS defines two types of gradients:
+
+- Linear Gradients (goes down/up/left/right/diagonally)
+- Radial Gradients (defined by their center)
+- Conic Gradients (defined by their center as well as the angle)
+- Repeating Gradients (repeats the gradient pattern)
+- Multiple Gradients (sets multiple gradients)
+- Gradient Angles (defines the direction of the gradient)
+- Gradient Color Stops (defines the position of colors in a gradient)
+- Gradient Repeating Angles (defines the repeating direction of a gradient)
+- Gradient Repeating Color Stops (defines the repeating position of colors in a gradient)
+- Gradient Shapes (defines the shape of a gradient)
+- Gradient Sizes (defines the size of a gradient)
+- Gradient Positions (defines the position of a gradient)
+- Gradient Images (defines an image as a gradient)
+- Gradient Borders (defines a gradient border)
+- Gradient Text (defines gradient text)
+- Gradient Backgrounds (defines gradient backgrounds)
+- Gradient Textures (defines gradient textures)
+- Gradient with Background Image (defines gradient with background image)
+  - [Gradient Generator](https://cssgradient.io/)
+  - [Gradient Generator](https://cssgradient.io/gradient-backgrounds/)
+  - [Gradient Generator](https://cssgradient.io/gradient-generator/)
+  - 

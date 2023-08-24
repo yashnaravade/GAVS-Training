@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div
+{
+width:100px;
+height:100px;
+background:red;
+animation:myfirst 15s;
+-webkit-animation:myfirst 200s; /* Safari and Chrome */
+}
+
+@keyframes myfirst
+{
+50%   {background:red;}
+35%  {background:yellow;}
+15%  {background:blue;}
+100% {background:green;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%   {background:red;}
+25%  {background:yellow;}
+50%  {background:blue;}
+100% {background:green;}
+}
+</style>
+</head>
+<body>
+
+<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+<p><b>Note:</b> When an animation is finished, it changes back to its original style.</p>
+
+<div></div>
+
+</body>
+</html>
+
