@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proposal</title>
+    <style>
+      h2 {
+        font-size: 50px;
+        text-align: center;
+        color: red;
+      }
+      button {
+        font-size: 30px;
+        padding: 10px;
+        margin: 0 20px 0 20px;
+        border-radius: 10px;
+        text-align: center;
+        border: 2px solid black;
+      }
+      #yes:hover {
+        background-color: red;
+        color: white;
+      }
+      #no:hover {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body id="container">
+    <h2>Do you love me?</h2>
+    <button id="yes">Yes</button>
+    <button id="no">No</button>
+
+    <script>
+      const button = document.getElementById("no");
+      const container = document.getElementById("container");
+
+      container.addEventListener("mousemove", () => {
+        const newX =
+          Math.random() * (container.offsetWidth - button.offsetWidth);
+        const newY =
+          Math.random() * (container.offsetHeight - button.offsetHeight);
+
+        button.style.transform = `translate(${newX}px, ${newY}px)`;
+      });
+
+      button.addEventListener("mouseenter", () => {
+        button.style.backgroundColor = "red";
+      });
+
+      button.addEventListener("mouseleave", () => {
+        button.style.backgroundColor = "black"; // Change this to "red" to match the hover effect
+      });
+    </script>
+  </body>
+</html>
