@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <style>
+    .container {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    #name{
+        font-size: 50px;
+    }
+
+    #day {
+      font-size: 40px;
+    }
+
+    #date {
+      font-size: 40px;
+    }
+
+    #time {
+      font-size: 40px;
+    }
+
+    @media (max-width: 768px) {
+      #day {
+        font-size: 30px;
+      }
+
+      #date {
+        font-size: 30px;
+      }
+
+      #time {
+        font-size: 30px;
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1 id="name"></h1>
+      <h1 id="day"></h1>
+      <h1 id="date"></h1>
+      <h1 id="time"></h1>
+    </div>
+
+    <script>
+      let name = prompt("Enter your name: ");
+      if (name == null || name == "") {
+        name = "User";
+      }
+      document.getElementById("name").innerHTML = "Welcome " + name + "!";
+
+      var date = new Date();
+      document.getElementById("date").innerHTML =
+        "Date: " +
+        date.getDate() +
+        "/" +
+        (date.getMonth() + 1 ) + // +1 because month starts from 0
+        "/" +
+        date.getFullYear();
+
+      var day = date.getDay();
+      var days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      document.getElementById("day").innerHTML = "Day: " + days[day];
+
+      setInterval(() => {
+        date = new Date();
+
+        document.getElementById("time").innerHTML =
+          "Time: " +
+          date.getHours() +
+          ":" +
+          date.getMinutes() +
+          ":" +
+          date.getSeconds();
+      }, 1000);
+    </script>
+  </body>
+</html>
