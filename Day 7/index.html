@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="form" action="some_url" method="POST">
+        <h3>Name:</h3>
+        <input type="text" id="input" placeholder="Enter your name" required />
+
+        <p id="para"></p>
+
+        <label for="check">
+          <input
+            type="checkbox"
+            id="check"
+            name="check"
+            value="check"
+            onclick="check()"
+          />
+          <span>I agree to the terms and conditions</span>
+        </label>
+        <br />
+
+        <input type="button" value="Save" id="save" disabled onclick="fun()"/>
+        <div class="out"></div>
+      </form>
+    </div>
+
+    <script>
+      var check = document.getElementById("check");
+      var save = document.getElementById("save");
+
+      //   save.disabled = !this.checked;
+      // });
+
+      //  Example of using other event than change
+        check.addEventListener("input", function () {
+          save.disabled = !this.checked;
+        });
+
+        function fun(){
+          var input = document.getElementById("input").value;
+          var out = document.querySelector(".out");
+          out.innerHTML = input;
+        }
+    </script>
+  </body>
+</html>

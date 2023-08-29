@@ -7,7 +7,7 @@ document.writeln("ID is " + ID + " and name is " + name);
 
 document.writeln("<br> Type of ID is \n " + typeof ID + " and type of name is " + typeof name); 
 
-if (typeof ID == "number") {
+if (typeof ID == "number") {4``
     document.writeln("<br> ID is a number");
 } else {
     document.writeln("<br> ID is not a number");
