@@ -25,10 +25,10 @@
         </label>
         <br />
 
-        <input type="button" value="Save" id="save" disabled onclick="fun()"/>
+        <input type="button" value="Save" id="save" disabled onclick="fun()" />
         <div class="out"></div>
       </form>
-    </div>
+    </div>  
 
     <script>
       var check = document.getElementById("check");
@@ -38,15 +38,15 @@
       // });
 
       //  Example of using other event than change
-        check.addEventListener("input", function () {
-          save.disabled = !this.checked;
-        });
+      check.addEventListener("input", function () {
+        save.disabled = !this.checked;
+      });
 
-        function fun(){
-          var input = document.getElementById("input").value;
-          var out = document.querySelector(".out");
-          out.innerHTML = input;
-        }
+      function fun() {
+        var input = document.getElementById("input").value;
+        var out = document.querySelector(".out");
+        out.innerHTML = input;
+      }
     </script>
   </body>
 </html>
