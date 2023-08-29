@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <!-- Code Omitted -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+
+      div {
+        display: inline-block;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+        background-color: #333;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      div:hover {
+        background-color: #666;
+      }
+
+      ol,
+      ul {
+        list-style-position: inside;
+        animation: slide-in 1s ease-in-out;
+      }
+
+      ol {
+        list-style-type: decimal;
+      }
+
+      ul {
+        list-style-type: disc;
+      }
+
+      @keyframes slide-in {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    </style>
+    <script type="text/javascript">
+      function AppendNewListItem() {
+        var li = document.createElement("li");
+        var liText = document.createTextNode("New List Item");
+        li.appendChild(liText);
+        List.appendChild(li);
+      }
+
+      function PrependNewListItem() {
+        var li = document.createElement("li");
+        var liText = document.createTextNode("New List Item");
+        li.appendChild(liText);
+        List.insertBefore(li, List.firstChild);
+      }
+
+      function ChangeStartNum() {
+        var start;
+        if ((start = List.getAttribute("start"))) {
+          start++;
+        } else {
+          start = 1;
+        }
+        List.setAttribute("start", start);
+      }
+
+      function ReplaceOlWithUl() {
+        List.parentNode.replaceChild(List2, List);
+        List = List2;
+      }
+
+      function ReplaceUlWithOl() {
+        List.parentNode.replaceChild(List3, List);
+        List = List3;
+      }
+
+      var List, List2, List3;
+      function init() {
+        List = document.getElementById("TheList");
+        List2 = document.getElementById("TheList2");
+        List3 = document.getElementById("TheList3");
+      }
+    </script>
+    <title>Inserting Nodes</title>
+  </head>
+
+  <body onload="init()">
+    <div onclick="AppendNewListItem()">Append List Item</div>
+    <div onclick="PrependNewListItem()">Prepend List Item</div>
+    <div onclick="ChangeStartNum()">Change Start Number</div>
+    <div onclick="ReplaceOlWithUl()">
+      Replace ordered list with bulleted list
+    </div>
+    <div onclick="ReplaceUlWithOl()">
+      Replace bulleted list with ordered list
+    </div>
+    <ol id="TheList">
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+    </ol>
+    <ul id="TheList2">
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+    </ul>
+    <ol id="TheList3">
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+    </ol>
+  </body>
+</html>
