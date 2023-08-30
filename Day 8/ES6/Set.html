@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>ES6 Sets</h2>
+    <p>Add values to a Set:</p>
+
+    <h3 id="demo"></h3>
+
+    <script>
+      // Create a Set
+      const letters = new Set();
+
+      // Add Values to the Set
+      letters.add("a");
+      letters.add("b");
+      letters.add("c");
+      letters.add("d");
+      // Display set.size
+      document.getElementById("demo").innerHTML = letters.size;
+      console.log(letters);
+
+      //   print the 3rd element of the set
+      console.log(letters[2]); // undefined because set is not an array and it does not have index numbers like arrays.
+
+      //   how to access the 3rd element of the set
+      let count = 0;
+      for (let letter of letters) {
+        if (count === 2) {
+          console.log(letter);
+        }
+        count++;
+      }
+
+      //   how to access the 4th element of the set using forEach
+      count = 0;
+      letters.forEach((letter) => {
+        if (count === 3) {
+          console.log(letter);
+          document.writeln(letter);
+        }
+        count++;
+      });
+    </script>
+  </body>
+</html>
