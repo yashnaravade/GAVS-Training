@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript standard classes</title>
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1 {
+        color: blue;
+      }
+
+      h2 {
+        color: green;
+      }
+
+      label {
+        display: inline-block;
+        width: 100px;
+      }
+
+      input {
+        width: 200px;
+      }
+
+      button {
+        width: 100px;
+      }
+
+      #result {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Your bike</h1>
+
+    <form action="">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" /><br /><br />
+      <label for="year">Year:</label>
+      <input type="text" id="year" name="year" /><br /><br />
+      <button type="submit" id="submit">Submit</button>
+    </form>
+
+    <h2 id="result"></h2>
+
+    <script>
+      class Bike {
+        constructor(name, year) {
+          this.name = name;
+          this.year = year;
+        }
+        get getName() {
+          return this.name;
+        }
+        set setName(name) {
+          this.name = name;
+        }
+        get getYear() {
+          return this.year;
+        }
+        set setYear(color) {
+          this.year = year;
+        }
+        // Q: Explain the above code
+        // A: The above code is a class called Bike with a constructor that takes in two parameters, name and color. The class has two getters and two setters. The getters return the name and color of the bike. The setters set the name and color of the bike.
+      }
+
+      //   let bike1 = new Bike("Honda", "Red");
+      //   let bike2 = new Bike("Yamaha", "Blue");
+      //   let bike3 = new Bike("Suzuki", "Black");
+
+      //   console.log(bike1);
+      //   console.log(bike2);
+      //   console.log(bike3);
+
+      let submit = document.getElementById("submit");
+      submit.addEventListener("click", function (e) {
+        e.preventDefault();
+        let name = document.getElementById("name").value;
+        let year = document.getElementById("year").value;
+        let bike = new Bike(name, year);
+        console.log(bike);
+        // document.writeln(`Your bike is a ${bike.getColor} ${bike.getName}`);
+        document.getElementById(
+          "result"
+        ).innerHTML = `Your bike is a ${bike.getYear} ${bike.getName}`;
+      });
+    </script>
+  </body>
+</html>
