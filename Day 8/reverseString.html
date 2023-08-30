@@ -7,20 +7,29 @@
   </head>
   <body>
     <script>
-      let str = prompt("Enter a string to reverse it: ");
-      let text = "";
+      const customApp = {
+        alerts: function () {
+          let str = prompt("Enter a string to reverse it: ");
+          return str;
+        },
+        reverseString: function (str) {
+          let reversed = "";
+          for (let i = str.length - 1; i >= 0; i--) {
+            reversed += str[i];
+          }
+          return reversed;
+        },
+      };
 
-      function reverseString(str) {
-        for (let i = str.length - 1; i >= 0; i--) {
-          text += str[i];
-        }
-        return text;
+      let inputString = customApp.alerts();
+      let reversedString = customApp.reverseString(inputString);
+
+      try {
+        alert(reversedString);
+        console.log(reversedString);
+      } catch (e) {
+        console.log(e);
       }
-
-      alert(reverseString(str));
-      confirm("Do you want to see the result in the console?")
-        ? console.log(reverseString(str))
-        : alert("Thank you for your time!");
     </script>
   </body>
 </html>
