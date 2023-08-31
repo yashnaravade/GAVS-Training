@@ -6,9 +6,7 @@ import VenuesList from "./components/VenuesList";
 function App() {
   return (
     <div className="App">
-      <br />
       <Teams />
-      <br />
       <VenuesList />
     </div>
   );
