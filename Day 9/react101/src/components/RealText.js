@@ -11,7 +11,7 @@ function RealText() {
         <input type="text" value={name} onChange={(e)=>{
             setName(e.target.value)
         }}/>
-        <h1 style={{"color":"black"}}>{name}</h1>
+        <h1 style={{"color":"black"}}>Hello, {name?name+"!":"World!!!"}</h1>
     </div>
   )
 }
