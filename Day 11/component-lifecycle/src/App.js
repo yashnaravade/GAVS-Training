@@ -27,11 +27,11 @@ function App() {
           <Route path="/three" element={<ChangePageColorThree />} />
         </Routes>
 
-        <Link to="/"><a href="/" style={linkStyle}>ChangePageColor</a></Link>
+        <Link to="/"><a href="/" style={linkStyle}>Change Page Color</a></Link>
         <br />        
-        <Link to="/two"><a href="/two" style={linkStyle}>ChangePageColorTwo</a></Link>
+        <Link to="/two"><a href="/two" style={linkStyle}>Change Text Colour</a></Link>
         <br />
-        <Link to="/three"><a href="/three" style={linkStyle}>ChangePageColorThree</a></Link>
+        <Link to="/three"><a href="/three" style={linkStyle}>Change Text Colour with Mount</a></Link>
       </Router>
 
     </div>
