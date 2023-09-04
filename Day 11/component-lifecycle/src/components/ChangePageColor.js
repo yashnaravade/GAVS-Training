@@ -58,3 +58,104 @@ class ChangePageColor extends Component {
 
 export default ChangePageColor;
 
+/**
+
+Here's an explanation of the code:
+
+Import React and Component:
+
+
+import React, { Component } from "react";
+
+This line imports the necessary modules, React and Component, which are required for creating React components.
+
+Create the ChangePageColor class component:
+
+class ChangePageColor extends Component {
+
+This defines a class component called ChangePageColor that extends the Component class from React.
+
+Initialize the component's state:
+
+constructor(props) {
+  super(props);
+  this.state = {
+    color: "red",
+    prevColor: "",
+    error: false,
+  };
+}
+
+In the constructor method, the component's initial state is set. It includes three properties:
+
+color: Represents the current selected color, initially set to "red."
+prevColor: Stores the previously selected color.
+error: A flag to indicate if there is an error (not used in the final code).
+Implement the handleChangeColor method:
+
+
+handleChangeColor = (e) => {
+  this.setState({ color: e.target.value });
+};
+
+
+This method is called when the user selects a color from the dropdown. It updates the color property in the component's state based on the selected value.
+
+Implement the handleButtonClick method:
+
+
+handleButtonClick = () => {
+  this.setState((prevState) => ({
+    prevColor: prevState.color,
+  }));
+  this.updateBackgroundColor();
+};
+
+
+This method is called when the "Change Page Color" button is clicked. It first updates the prevColor property with the current color. Then, it calls the updateBackgroundColor method to change the page's background color.
+
+Implement the updateBackgroundColor method:
+
+
+updateBackgroundColor = () => {
+  document.body.style.backgroundColor = this.state.color;
+};
+
+
+This method changes the background color of the page to the currently selected color from the component's state.
+
+Render the component's UI:
+
+render() {
+  return (
+    <div>
+      <h1>Change Page Color</h1>
+      <select value={this.state.color} onChange={this.handleChangeColor}>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+      </select>
+      <button onClick={this.handleButtonClick}>Change Page Color</button>
+      <div>Previous Color: {this.state.prevColor}</div>
+      {this.state.error && <div>Invalid Color</div>}
+    </div>
+  );
+}
+
+This is the component's render method. It defines the UI elements to display:
+
+A title "Change Page Color."
+A dropdown menu to select a color, with the current selected color set as its value.
+A "Change Page Color" button that triggers the background color change.
+A display of the previous color.
+An error message (not used in the final code).
+Export the ChangePageColor component as the default export:
+
+jsx
+Copy code
+export default ChangePageColor;
+This allows you to use the ChangePageColor component in other parts of your application.
+
+In summary, this code creates a React component that allows the user to select a color from a dropdown menu and change the page's background color when they click the "Change Page Color" button. The component keeps track of the previous color selected as well.
+
+ */
