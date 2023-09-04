@@ -34,7 +34,6 @@ Mounting is the process of adding elements to the DOM. These methods are called 
 - This method is a good place to set up any subscriptions. If you do that, don’t forget to unsubscribe in componentWillUnmount().
   - Calling setState() in this method will trigger an extra rendering, but it is guaranteed to flush during the same tick. This guarantees that even though the render() will be called twice in this case, the user won’t see the intermediate state.
   - Use this pattern with caution because it often causes performance issues. It can, however, be necessary for cases like modals and tooltips when you need to measure a DOM node before rendering something that depends on its size or position.
-  - This method is also a good place to set up any subscriptions. If you do that, don’t forget to unsubscribe in componentWillUnmount().
   - You may call setState() immediately in componentDidMount(). It will trigger an extra rendering, but it will happen before the browser updates the screen. This guarantees that even though the render() will be called twice in this case, the user won’t see the intermediate state. Use this pattern with caution because it often causes performance issues. In most cases, you should be able to assign the initial state in the constructor() instead. It can, however, be necessary for cases like modals and tooltips when you need to measure a DOM node before rendering something that depends on its size or position.
 
 ## Updating
@@ -86,4 +85,3 @@ These methods are called when there is an error during rendering, in a lifecycle
 - Error boundaries work like a JavaScript catch {} block, but for components.
 - You can pass info to an error boundary as a third argument in componentDidCatch(info).
 - Error boundaries catch errors during rendering, in lifecycle methods, and in constructors of the whole tree below them.
-
