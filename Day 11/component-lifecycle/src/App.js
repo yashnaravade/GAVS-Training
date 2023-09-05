@@ -1,7 +1,7 @@
+import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import ChangePageColorThree from "./components/ChangeColorThree";
 import ChangePageColor from "./components/ChangePageColor";
 import ChangePageColorTwo from "./components/ChangePgColorTwo";
-import ChangePageColorThree from "./components/ChangeColorThree";
-import {BrowserRouter as Router, Route, Routes, Link} from "react-router-dom";
 
 import "./App.css";
 
@@ -15,7 +15,7 @@ function App() {
     padding: ".5rem",
     backgroundColor: "black",
     borderRadius: "5px",
-    display: "inline-block"
+    display: "inline-block",
   };
 
   return (
@@ -27,13 +27,24 @@ function App() {
           <Route path="/three" element={<ChangePageColorThree />} />
         </Routes>
 
-        <Link to="/"><a href="/" style={linkStyle}>Change Page Color</a></Link>
-        <br />        
-        <Link to="/two"><a href="/two" style={linkStyle}>Change Text Colour</a></Link>
+        <Link to="/">
+          <a href="/" style={linkStyle}>
+            Change Page Color
+          </a>
+        </Link>
         <br />
-        <Link to="/three"><a href="/three" style={linkStyle}>Change Text Colour with Mount</a></Link>
+        <Link to="/two">
+          <a href="/two" style={linkStyle}>
+            Change Text Colour
+          </a>
+        </Link>
+        <br />
+        <Link to="/three">
+          <a href="/three" style={linkStyle}>
+            Change Text Colour with Mount
+          </a>
+        </Link>
       </Router>
-
     </div>
   );
 }
