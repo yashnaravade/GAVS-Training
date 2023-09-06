@@ -120,7 +120,7 @@ export class LifeCycleComponent implements OnInit, OnChanges, DoCheck, AfterCont
 
 ## Output
 
-![LifeCycle-Function](https://raw.githubusercontent.com/Ch-sriram/Angular-Interview-Questions/main/Images/LifeCycle-Function.png)
+![LifeCycle-Function](./output.png)
 
 ## Conclusion
 
