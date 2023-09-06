@@ -1,0 +1,61 @@
+.editor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+}
+
+.editor__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.editor__icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+
+.editor__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.editor__textarea {
+  width: 100%;
+  height: 50%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  resize: none;
+  outline: none;
+}
+
+.editor__preview {
+  width: 100%;
+  height: 50%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  overflow-y: scroll;
+  outline: none;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
