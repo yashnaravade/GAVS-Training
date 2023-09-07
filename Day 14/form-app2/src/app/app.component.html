@@ -1,16 +1,22 @@
-<div>
+<div class="container">
   <h2>Personal Details</h2>
 
-  <label for="firstName">First Name:</label>
-  <input type="text" id="firstName" [(ngModel)]="firstName" />
+  <div class="form-group">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" [(ngModel)]="firstName" />
+  </div>
 
-  <label for="lastName">Last Name:</label>
-  <input type="text" id="lastName" [(ngModel)]="lastName" />
+  <div class="form-group">
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" [(ngModel)]="lastName" />
+  </div>
 
-  <label for="age">Age:</label>
-  <input type="text" id="age" [(ngModel)]="age" />
+  <div class="form-group">
+    <label for="age">Age:</label>
+    <input type="text" id="age" [(ngModel)]="age" />
+  </div>
 
-  <fieldset>
+  <fieldset class="form-group">
     <legend>Gender:</legend>
     <label>
       <input type="radio" [(ngModel)]="gender" name="gender" value="Male" />
@@ -22,37 +28,45 @@
       Female
     </label>
   </fieldset>
+  <br />
+  <div class="form-group">
+    <label for="favoriteColor">Favorite Theme Color:</label>
+    <select id="favoriteColor" [(ngModel)]="favColour">
+      <option value="Red">Red</option>
+      <option value="Green">Green</option>
+      <option value="Blue">Blue</option>
+      <option value="Orange">Orange</option>
+    </select>
+  </div>
 
-  <label for="favoriteColor">Favorite Color:</label>
-  <select id="favoriteColor" [(ngModel)]="favColour">
-    <option value="Red">Red</option>
-    <option value="Green">Green</option>
-    <option value="Blue">Blue</option>
-    <option value="Orange">Orange</option>
-  </select>
-
-  <div [style.color]="favColour">
-    Sample Text
-    <br />
-    Sample Text
-    <br />
-    Sample Text
+  <div [style.color]="favColour" class="theme-text">
+    <h3>Sample Text</h3>
+    <h3>Sample Text</h3>
+    <h3>Sample Text</h3>
   </div>
 </div>
 
-<div>
+<div class="container">
   <h2>Address</h2>
 
-  <label for="street">Street:</label>
-  <input type="text" id="street" [(ngModel)]="street" />
+  <div class="form-group">
+    <label for="street">Street:</label>
+    <input type="text" id="street" [(ngModel)]="street" />
+  </div>
 
-  <label for="city">City:</label>
-  <input type="text" id="city" [(ngModel)]="city" />
+  <div class="form-group">
+    <label for="city">City:</label>
+    <input type="text" id="city" [(ngModel)]="city" />
+  </div>
 </div>
 
-<input type="checkbox" [(ngModel)]="isDisabled" [value]="isDisabled" /> Disable
-<br />
-<button [disabled]="isDisabled">Submit</button>
-<br />
+<div class="form-group">
+  <input type="checkbox" [(ngModel)]="isDisabled" [value]="isDisabled" />
+  Disable
+</div>
+
+<div class="form-group">
+  <button [disabled]="isDisabled">Submit</button>
+</div>
 
 <router-outlet></router-outlet>

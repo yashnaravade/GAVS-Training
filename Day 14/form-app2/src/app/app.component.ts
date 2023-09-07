@@ -20,4 +20,24 @@ export class AppComponent {
   hobbies: string[] = ['Music', 'Sports', 'Reading'];
   showHobbies: boolean = false;
   favColour: string = 'red'; // default color
+  favTheme: string = 'dark'; // default theme
+  favBackgroundTheme = {
+    background1: 'lightblue',
+    background2: 'lightcoral',
+    background3: 'lightgreen',
+    background4: 'lightyellow',
+  };
+  backgroundThemes = ['lightblue', 'lightcoral', 'lightgreen', 'lightyellow'];
+  changeBackgroundTheme() {
+    this.favColour = this.favBackgroundTheme.background1;
+  }
+  changeBackgroundTheme2() {
+    this.favColour = this.favBackgroundTheme.background2;
+  }
+  changeBackgroundTheme3() {
+    this.favColour = this.favBackgroundTheme.background3;
+  }
+  changeBackgroundTheme4() {
+    this.favColour = this.favBackgroundTheme.background4;
+  }
 }
