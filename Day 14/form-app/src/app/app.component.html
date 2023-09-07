@@ -1,0 +1,34 @@
+
+<!-- display my name i.e 'Yash', a greeting message, location and current date -->
+
+<h1>Yash</h1>
+<h2>Good Morning</h2>
+<h3>Location: Pune</h3>
+<h3>Date: 07/09/2023</h3>
+
+
+
+<!-- <h3>Current Date: {{today | date}}</h3> <!-- 1st way -->
+<!-- <h3>Current Date: {{today | date:'fullDate'}}</h3> 2nd way --> 
+
+<!-- make a simple form -->
+
+<form action="">
+  <b>Join status</b> &nbsp; <input type="checkbox" [checked] name="joinStatus" id=""> <br>
+  <b>First Name</b> &nbsp; <input type="text" name="firstName" id=""> <br>
+  <b>Choose your location</b> &nbsp; <select name="location" id="">
+    <option value="Pune">Pune</option>
+    <option value="Mumbai">Mumbai</option>
+    <option value="Delhi">Delhi</option>
+    </select>
+
+    <br>
+
+    <!-- <button [disabled]="!joinStatus">Submit</button> 1st way -->
+    <!-- <button [disabled]="joinStatus">Submit</button> 2nd way  -->
+
+
+
+</form>
+
+<router-outlet></router-outlet>
