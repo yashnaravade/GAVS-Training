@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
   styles: [`b{color:red;font-size:25}`]
 })
 export class AppComponent {
-  title = 'firstangular application';
+  title = 'First Angular App';
   firstName='Yash';
   lastName='Naravade';
   location='Pune';
