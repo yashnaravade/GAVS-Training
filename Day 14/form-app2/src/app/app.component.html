@@ -1,50 +1,58 @@
-<b>Personal details</b>
-<br />
-<b>First Name:</b>
-<input type="text" [(ngModel)]="firstName" />
-<br />
-<b>Last Name:</b>
-<input type="text" [(ngModel)]="lastName" />
-<br />
-<b>Age:</b>
-<input type="text" [(ngModel)]="age" />
-<br />
-<b>Gender:</b>
-<fieldset>  
-  <!-- fieldset is used to group related elements in a form -->
-  <!-- Q: fieldset vs legend -->
-  <!-- A: fieldset is used to group related elements in a form, while legend is used to define a caption for the fieldset element. -->
-  <legend>Choose one</legend>
-  <input type="radio" [(ngModel)]="gender" name="gender" value="Male" /> Male
-  <br />
-  <input type="radio" [(ngModel)]="gender" name="gender" value="Female" /> Female
-  <br />
-</fieldset>
+<div>
+  <h2>Personal Details</h2>
 
-<select size="4">
-  <option value="Red">Red</option>
-  <option value="Green">Green</option>
-  <option value="Blue">Blue</option>
-  <option value="Orange">Orange</option>
-</select>
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName" [(ngModel)]="firstName" />
 
-<div [style.color]="favColour">
-  Sample Text
-  <br />
-  Sample Text
-  <br />
-  Sample Text
-  <br />
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName" [(ngModel)]="lastName" />
+
+  <label for="age">Age:</label>
+  <input type="text" id="age" [(ngModel)]="age" />
+
+  <fieldset>
+    <legend>Gender:</legend>
+    <label>
+      <input type="radio" [(ngModel)]="gender" name="gender" value="Male" />
+      Male
+    </label>
+    <br />
+    <label>
+      <input type="radio" [(ngModel)]="gender" name="gender" value="Female" />
+      Female
+    </label>
+  </fieldset>
+
+  <label for="favoriteColor">Favorite Color:</label>
+  <select id="favoriteColor" [(ngModel)]="favColour">
+    <option value="Red">Red</option>
+    <option value="Green">Green</option>
+    <option value="Blue">Blue</option>
+    <option value="Orange">Orange</option>
+  </select>
+
+  <div [style.color]="favColour">
+    Sample Text
+    <br />
+    Sample Text
+    <br />
+    Sample Text
+  </div>
 </div>
-<br />
 
-<b>Address</b>
+<div>
+  <h2>Address</h2>
+
+  <label for="street">Street:</label>
+  <input type="text" id="street" [(ngModel)]="street" />
+
+  <label for="city">City:</label>
+  <input type="text" id="city" [(ngModel)]="city" />
+</div>
+
+<input type="checkbox" [(ngModel)]="isDisabled" [value]="isDisabled" /> Disable
 <br />
-<b>Street:</b>
-<input type="text" [(ngModel)]="street" />
-<br />
-<b>City:</b>
-<input type="text" [(ngModel)]="city" />
+<button [disabled]="isDisabled">Submit</button>
 <br />
 
 <router-outlet></router-outlet>
