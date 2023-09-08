@@ -40,4 +40,15 @@ export class AppComponent {
   changeBackgroundTheme4() {
     this.favColour = this.favBackgroundTheme.background4;
   }
+
+  save() {
+    var message = 'Saved Successfully';
+    alert(message);
 }
+
+verifyFirstName(obj: any) {
+  if (obj.value == '') {
+    alert('First Name is required');
+  }
+}
+  }
