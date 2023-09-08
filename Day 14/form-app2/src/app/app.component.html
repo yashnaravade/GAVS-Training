@@ -3,8 +3,7 @@
 
   <div class="form-group">
     <label for="firstName">First Name:</label>
-    <input type="text" id="firstName" [(ngModel)]="firstName" 
-    (blur)="onBlur($event)" (focus)="onFocus($event)" />
+    <input type="text" id="firstName" [(ngModel)]="firstName" />
   </div>
   
 
@@ -70,5 +69,13 @@
 <div class="form-group">
   <button [disabled]="isDisabled">Submit</button>
 </div>
+
+<!-- display or hide an element using ng if -->
+<div *ngIf="isDisabled">
+  <h2>Disabled</h2>
+</div>
+
+
+
 
 <router-outlet></router-outlet>
