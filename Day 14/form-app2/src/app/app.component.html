@@ -105,12 +105,14 @@
 
 <!-- switch case based location with select dropdown. With each location, display a different message -->
 
+<label for="location">Select the Location here:</label>
 <select [(ngModel)]="location">
   <option value="Bangalore">Bangalore</option>
   <option value="Chennai">Chennai</option>
   <option value="Hyderabad">Hyderabad</option>
   <option value="Mumbai">Mumbai</option>
 </select>
+<br />
 
 <div [ngSwitch]="location">
   <div *ngSwitchCase="'Bangalore'">
@@ -129,7 +131,5 @@
     <h2>Invalid Location</h2>
   </div>
 </div>
-
-
 
 <router-outlet></router-outlet>
