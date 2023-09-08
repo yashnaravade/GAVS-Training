@@ -28,6 +28,7 @@ export class AppComponent {
     background4: 'lightyellow',
   };
   isEnabled: boolean = false;
+  agree: boolean = false;
   backgroundThemes = ['lightblue', 'lightcoral', 'lightgreen', 'lightyellow'];
   changeBackgroundTheme() {
     this.favColour = this.favBackgroundTheme.background1;

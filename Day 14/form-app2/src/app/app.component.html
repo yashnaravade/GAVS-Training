@@ -83,4 +83,18 @@
   <h2>Disabled</h2>
 </ng-template>
 
+<!-- checkbox for agree to terms and conditions. If unchecked, submit button is disabled and show a message -->
+<div class="form-group">
+  <input type="checkbox" [(ngModel)]="agree" [value]="agree" />
+  Agree to terms and conditions
+</div>
+
+<div class="form-group">
+  <button [disabled]="!agree">Submit</button>
+</div>
+
+<div *ngIf="!agree">
+  <h2>Please agree to terms and conditions</h2>
+</div>
+
 <router-outlet></router-outlet>
