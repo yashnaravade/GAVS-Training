@@ -53,4 +53,9 @@ verifyFirstName(obj: any) {
     alert('First Name is required');
   }
 }
+
+names: string[] = ['Yash', 'Rahul', 'Rohit', 'Sachin', 'Virat'];
+location: string = 'Pune';
   }
+
+

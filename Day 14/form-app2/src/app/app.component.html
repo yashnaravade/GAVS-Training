@@ -97,4 +97,39 @@
   <h2>Please agree to terms and conditions</h2>
 </div>
 
+<b>Total # of employees = </b> {{ names.length }}
+
+<ul>
+  <li *ngFor="let name of names">{{ name }}</li>
+</ul>
+
+<!-- switch case based location with select dropdown. With each location, display a different message -->
+
+<select [(ngModel)]="location">
+  <option value="Bangalore">Bangalore</option>
+  <option value="Chennai">Chennai</option>
+  <option value="Hyderabad">Hyderabad</option>
+  <option value="Mumbai">Mumbai</option>
+</select>
+
+<div [ngSwitch]="location">
+  <div *ngSwitchCase="'Bangalore'">
+    <h2>Welcome to Bangalore</h2>
+  </div>
+  <div *ngSwitchCase="'Chennai'">
+    <h2>Welcome to Chennai</h2>
+  </div>
+  <div *ngSwitchCase="'Hyderabad'">
+    <h2>Welcome to Hyderabad</h2>
+  </div>
+  <div *ngSwitchCase="'Mumbai'">
+    <h2>Welcome to Mumbai</h2>
+  </div>
+  <div *ngSwitchDefault>
+    <h2>Invalid Location</h2>
+  </div>
+</div>
+
+
+
 <router-outlet></router-outlet>
