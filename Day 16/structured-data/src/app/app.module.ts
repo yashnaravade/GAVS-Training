@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { empManagementService } from './empmanagementservice';
+import { ProjectManagementServiceService } from './project-management-service.service';
 
 @NgModule({
   declarations: [
@@ -12,9 +14,9 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-  FormsModule
+    FormsModule
   ],
-  providers: [],
+  providers: [empManagementService,ProjectManagementServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

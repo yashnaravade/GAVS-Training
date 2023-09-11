@@ -1,89 +1,44 @@
 import { Component } from '@angular/core';
-
+import { empManagementService } from './empmanagementservice';
+import { ProjectManagementServiceService } from './project-management-service.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  providers:[ProjectManagementServiceService]
 })
 export class AppComponent {
-  title = 'structured-data';
-
-
-  firstName = '';
-  lastName = '';
-  age = 0;
-  salary = 0;
-  designation = '';
-  location = '';
-
-  // declare an array of objects
-  employees = [
-    {
-      firstName: 'Yash',
-      lastName: 'Naravade',
-      age: 22,
-      salary: 50000,
-      designation: 'Software Engineer',
-      location: 'Pune',
-    },
-    {
-      firstName: 'Ankit',
-      lastName: 'Kumar',
-      age: 25,
-      salary: 60000,
-      designation: 'Senior Software Engineer',
-      location: 'Mumbai',
-    },
-    {
-      firstName: 'Vansh',
-      lastName: 'Devgan',
-      age: 30,
-      salary: 70000,
-      designation: 'Team Lead',
-      location: 'Pune',
-    },
-    {
-      firstName: 'Gaurav',
-      lastName: 'Saxena',
-      age: 35,
-      salary: 80000,
-      designation: 'Project Manager',
-      location: 'Bangalore',
-    },
-    {
-      firstName: 'Ayushi',
-      lastName: 'Vaishnav',
-      age: 40,
-      salary: 90000,
-      designation: 'Project Manager',
-      location: 'Pune',
-    },
-    {
-      firstName: 'Sarthak',
-      lastName: 'Garg',
-      age: 45,
-      salary: 100000,
-      designation: 'Project Manager',
-      location: 'Mumbai',
-    },
-    {
-      firstName: 'Niraj',
-      lastName: 'Sahu',
-      age: 50,
-      salary: 110000,
-      designation: 'Project Manager',
-      location: 'Pune',
-    },
+  title = 'structureddata';
+  //emp=new Object();
+  constructor(private PmMgsvc:ProjectManagementServiceService){}
+  emplist = [
+  { empId:1,firstName: "Yogeshwaran", lastName: "Rajendran", age: 22, location: "chennai" },
+  { empId:2,firstName: "Rajesh", lastName: "Kumar", age: 34, location: "bangalore" },
+  { empId:3,firstName: "Johnny", lastName: "DcruZe", age: 22, location: "chennai" }
   ];
+  emp = { empId:4,firstName: "Vijay", lastName: "Antony", age: 38, location: "chennai" }
+  
+  // firstName: string= "Unknown";
+  // lastName:string= "Unknown";
+  // age:number= 22;
+  // location:string= "chennai" 
 
-  addEmployee() {
-    this.employees.push({
-      firstName: this.firstName,
-      lastName: this.lastName,
-      age: this.age,
-      salary: this.salary,
-      designation: this.designation,
-      location: this.location,
-    });
+  empsvc:empManagementService =new empManagementService;
+  
+  addfunction()
+  {
+    this.empsvc.addEmp(this.emp, this.emplist);
+  }
+
+  forLoops()
+  {
+    for(let i in this.emplist)
+      console.log(i);
+    for(let i of this.emplist)
+    console.log(i.empId+","+i.firstName+","+i.lastName+","+i.age+","+i.location);
+  }
+  addProject()
+  {
+    this.PmMgsvc.addProjects();
   }
 }

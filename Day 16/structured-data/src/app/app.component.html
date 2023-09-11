@@ -1,61 +1,34 @@
-<div class="container">
+first name:{{emp.firstName}}<br>
+last name: {{emp.lastName}}<br>
+Age : {{emp.age}}<br>
+location:{{emp.location}}<br>
 
-  <div class="box1">
-<!-- Form to get all this data and put it in table -->
-<h1>Enter Employee Details</h1>
-
-<!-- <p>Your First Name:</p>
-<input type="text" [(ngModel)]="firstName" /><br />
-<p>Your Last Name:</p>
-<input type="text" [(ngModel)]="lastName" /><br />
-<p>Your Age:</p>
-<input type="text" [(ngModel)]="age" /><br />
-<p>Your Salary:</p>
-<input type="text" [(ngModel)]="salary" /><br />
-<p>Your Location:</p>
-<input type="text" [(ngModel)]="location" /><br /> -->
-
-<label for="firstName">First Name</label> <br />
-<input type="text" [(ngModel)]="firstName" /><br />
-<label for="lastName">Last Name</label> <br />
-<input type="text" [(ngModel)]="lastName" /><br />
-<label for="age">Age</label> <br />
-<input type="text" [(ngModel)]="age" /><br />
-<label for="salary">Salary</label> <br />
-<input type="text" [(ngModel)]="salary" /><br />
-<label for="location">Location</label> <br />
-<input type="text" [(ngModel)]="location" /><br />
-
-<button (click)="addEmployee()">Add Employee</button>
+Your Employee id<input type="number"[(ngModel)]="emp.empId"><br>
+Your First Name <input type="text" [(ngModel)]="emp.firstName"><br>
+Your Last Name <input type="text" [(ngModel)]="emp.lastName"><br>
+Age <input type="number" [(ngModel)]="emp.age"><br>
+Location<input type="text"[(ngModel)]="emp.location"><br>
+<!--<input type="button" value="Add data" (click)="emplist.push(emp)">-->
+<input type="button" value="Add data" (click)="addfunction()">
 
 
-<!-- Q: It is adding the first element again instead of what is written in the form? -->
-<!-- A: Because we are not clearing the form after adding the employee -->
-<!-- Q: How to clear the form? -->
-<!-- A: We can clear the form by setting the values of the variables to empty strings -->
-</div>
-
-<div class="box2">
-<!-- Display data in table -->
-<h1>Employee Details</h1>
-
-<table border="1">
-  <tr>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Age</th>
-    <th>Salary</th>
-    <th>Location</th>
+<table style="border: 5px;border-style: solid;">
+  <tr style="background-color:cadetblue">
+    <td><b>EmpId</b></td>
+    <td><b>Firstname</b></td>
+    <td><b>Lastname</b></td>
+    <td><b>Age</b></td>
+    <td><b>Location</b></td>
   </tr>
-  <tr *ngFor="let e of employees">
-    <td>{{ e.firstName }}</td>
-    <td>{{ e.lastName }}</td>
-    <td>{{ e.age }}</td>
-    <td>{{ e.salary }}</td>
-    <td>{{ e.location }}</td>
+  <tr *ngFor="let i of emplist" style="background-color: bisque;">
+    <td>{{i.empId}}</td>
+    <td>{{i.firstName}}</td>
+    <td>{{i.lastName}}</td>
+    <td>{{i.age}}</td>
+    <td>{{i.location}}</td>
   </tr>
 </table>
-</div>
-</div>
+<br>
+<input type="button" value="For loops" (click)="forLoops()"/>
 
 <router-outlet></router-outlet>
