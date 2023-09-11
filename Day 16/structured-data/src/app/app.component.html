@@ -1,3 +1,41 @@
+<div class="container">
+
+  <div class="box1">
+<!-- Form to get all this data and put it in table -->
+<h1>Enter Employee Details</h1>
+
+<!-- <p>Your First Name:</p>
+<input type="text" [(ngModel)]="firstName" /><br />
+<p>Your Last Name:</p>
+<input type="text" [(ngModel)]="lastName" /><br />
+<p>Your Age:</p>
+<input type="text" [(ngModel)]="age" /><br />
+<p>Your Salary:</p>
+<input type="text" [(ngModel)]="salary" /><br />
+<p>Your Location:</p>
+<input type="text" [(ngModel)]="location" /><br /> -->
+
+<label for="firstName">First Name</label> <br />
+<input type="text" [(ngModel)]="firstName" /><br />
+<label for="lastName">Last Name</label> <br />
+<input type="text" [(ngModel)]="lastName" /><br />
+<label for="age">Age</label> <br />
+<input type="text" [(ngModel)]="age" /><br />
+<label for="salary">Salary</label> <br />
+<input type="text" [(ngModel)]="salary" /><br />
+<label for="location">Location</label> <br />
+<input type="text" [(ngModel)]="location" /><br />
+
+<button (click)="addEmployee()">Add Employee</button>
+
+
+<!-- Q: It is adding the first element again instead of what is written in the form? -->
+<!-- A: Because we are not clearing the form after adding the employee -->
+<!-- Q: How to clear the form? -->
+<!-- A: We can clear the form by setting the values of the variables to empty strings -->
+</div>
+
+<div class="box2">
 <!-- Display data in table -->
 <h1>Employee Details</h1>
 
@@ -17,5 +55,7 @@
     <td>{{ e.location }}</td>
   </tr>
 </table>
+</div>
+</div>
 
 <router-outlet></router-outlet>

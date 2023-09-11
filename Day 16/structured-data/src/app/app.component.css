@@ -1,16 +1,72 @@
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }
 
-table{
-    border: 1px solid black;
-    border-collapse: collapse;
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
+input {
+  width: 40%;
+  padding: 10px;
+  margin: 3px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
-table td, table th{
-    border: 1px solid black;
-    padding: 5px;
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.box1 {
+  width: 40%;
+  float: left;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.box2 {
+  width: 40%;
+  float: right;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+p {
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
+}
+
+input [type="submit"] {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+}
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+table td,
+table th {
+  border: 1px solid black;
+  padding: 5px;
 }
