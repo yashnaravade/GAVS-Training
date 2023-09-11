@@ -1,7 +1,21 @@
-First name {{emp.firstName}} <br>
-Last name {{emp.lastName}} <br>
-Age {{emp.age}} <br>
-Salary {{emp.salary}} <br>
-Location {{emp.location}} <br>
+<!-- Display data in table -->
+<h1>Employee Details</h1>
+
+<table border="1">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Age</th>
+    <th>Salary</th>
+    <th>Location</th>
+  </tr>
+  <tr *ngFor="let e of employees">
+    <td>{{ e.firstName }}</td>
+    <td>{{ e.lastName }}</td>
+    <td>{{ e.age }}</td>
+    <td>{{ e.salary }}</td>
+    <td>{{ e.location }}</td>
+  </tr>
+</table>
 
 <router-outlet></router-outlet>
