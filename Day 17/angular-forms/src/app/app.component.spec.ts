@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular-forms'`, () => {
+  it(`should have as title 'formstemplate'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-forms');
+    expect(app.title).toEqual('formstemplate');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-forms app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('formstemplate app is running!');
   });
 });

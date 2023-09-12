@@ -3,18 +3,17 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-forms';
+  project_list : any=[];
+  project_Data : any;
+  title = 'formstemplate';
 
-  onSubmit() {
-    // Handle the form submission logic here
-    console.log('Form submitted');
-  }
-
-  processData(data: any) {
-    // Handle the form submission logic here
-    console.log('Form submitted');
+  processData(projectData : any){
+    var pdata=JSON.stringify(projectData.value)
+    this.project_Data=JSON.parse(pdata);
+    console.log(this.project_Data);
+    this.project_list.push(this.project_Data);
   }
 }

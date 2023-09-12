@@ -1,44 +1,22 @@
-<div>
-  <h2>Contact Form</h2>
-  <!-- (ngSubmit)="processData(projectData)" is the event binding syntax for the form submission. It will call the processData() method in the component class when the form is submitted. -->
-
-  <!-- #projectData="ngForm" is the template reference variable for the form. It is used to access the form data in the component class. -->
-
-  <!-- ngModel is the directive that binds the form data to the component class. -->
-
-  <!-- The name attribute of the input elements is used to access the form data in the component class. -->
 
 
+<form #projectData="ngForm" (ngSubmit)="processData(projectData)">
 
-  <form #projectData="ngForm" (ngSubmit)="processData(projectData)">
-    <div>
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" ngModel>
-    </div>
-    <div>
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" ngModel>
-    </div>
-    <div>
-      <label for="subject">Subject</label>
-      <select id="subject" name="subject" ngModel>
-        <option value="Angular">Angular</option>
-        <option value="React">React</option>
-        <option value="Vue">Vue</option>
-      </select>
+  your projectID <input type="number" name="projectID" ngModel/><br>
+  Your projectName <input type="text" name="projectName" ngModel/><br>
+  Project Start Date <input type="date" name="startDate" ngModel/><br>
+  Project End Date<input type="date" name="endDate" ngModel/><br>
+  <input type="submit" value="save"/>
+</form>
 
-    </div>
-    <div>
-      <label for="phone">Phone</label>
-      <input type="text" id="phone" name="phone" ngModel>
-    </div>
-    <div>
-      <label for="message">Message</label>
-      <textarea id="message" name="message" ngModel></textarea>
-    </div>
-    <button type="submit" value="Save">Submit</button>
-  </form>
+<b>Employee Details</b>
+<table style="border-color: blueviolet; border:5px; border-style:groove">
+  <tr><td>project ID</td> <td>Project Name</td><td>Start Date</td><td>End Date</td></tr>
 
-</div>
+  <tr *ngFor = "let p of project_list">
+    <td>{{p.projectID}}</td><td>{{p.projectName}}</td>
+    <td>{{p.startDate}}</td><td>{{p.endDate}}</td>
+  </tr>
+</table>
 
 <router-outlet></router-outlet>
