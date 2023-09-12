@@ -3,7 +3,7 @@ last name: {{emp.lastName}}<br>
 Age : {{emp.age}}<br>
 location:{{emp.location}}<br>
 
-      <input type="number"[(ngModel)]="emp.empId"><br>
+Your Employee id<input type="number"[(ngModel)]="emp.empId"><br>
 Your First Name <input type="text" [(ngModel)]="emp.firstName"><br>
 Your Last Name <input type="text" [(ngModel)]="emp.lastName"><br>
 Age <input type="number" [(ngModel)]="emp.age"><br>
@@ -30,5 +30,9 @@ Location<input type="text"[(ngModel)]="emp.location"><br>
 </table>
 <br>
 <input type="button" value="For loops" (click)="forLoops()"/>
+<select [(ngModel)]="empId">
+  <option *ngFor="let empdata of emplist" value="{{empdata.empId}}">{{empdata.empId}}</option>
+</select>
+  <input type="button" value="Delete" (click)="deleteEmp()"/>
 
 <router-outlet></router-outlet>

@@ -9,6 +9,7 @@ import { ProjectManagementServiceService } from './project-management-service.se
 })
 export class AppComponent {
   title = 'structureddata';
+  empId:number=1;
   //emp=new Object();
   constructor(private PmMgsvc:ProjectManagementServiceService){}
   emplist = [
@@ -40,5 +41,9 @@ export class AppComponent {
   addProject()
   {
     this.PmMgsvc.addProjects();
+  }
+  deleteEmp()
+  {
+    this.empsvc.deleteEmp(this.empId, this.emplist);
   }
 }
