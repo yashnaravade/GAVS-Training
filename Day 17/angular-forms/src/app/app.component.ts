@@ -14,6 +14,7 @@ export class AppComponent {
     var pdata=JSON.stringify(projectData.value)
     this.project_Data=JSON.parse(pdata);
     console.log(this.project_Data);
+    console.log(projectData.value);
     this.project_list.push(this.project_Data);
   }
 }
