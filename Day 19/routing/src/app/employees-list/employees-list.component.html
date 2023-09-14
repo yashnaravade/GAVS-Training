@@ -6,12 +6,12 @@
     <td>LastName</td>
   </tr>
   <tr *ngFor="let emp of emplist">
-    <td>{{emp.empId}}</td>
-    <td>{{emp.firstName}}</td>
-    <td>{{emp.lastName}}</td> 
+    <td>{{ emp.empId }}</td>
+    <td>{{ emp.firstName }}</td>
+    <td>{{ emp.lastName }}</td>
   </tr>
 </table>
-<br>
+<br />
 
 <!-- button to go home -->
 <button (click)="goHome()">Home</button>
@@ -21,5 +21,3 @@
 
 <!-- button to go to the department list -->
 <button (click)="goDepartment()">Departments</button>
-
-

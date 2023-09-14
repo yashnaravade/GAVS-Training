@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-employees-list',
   templateUrl: './employees-list.component.html',
-  styleUrls: ['./employees-list.component.css']
+  styleUrls: ['./employees-list.component.css'],
 })
 export class EmployeesListComponent {
   emplist: any = [
@@ -17,7 +17,6 @@ export class EmployeesListComponent {
     window.location.href = '/'; // This line navigates to the home page in the browser
   }
 
-
   goBack() {
     window.history.back(); // This line navigates back to the previous page in the browser
   }
@@ -25,7 +24,4 @@ export class EmployeesListComponent {
   goDepartment() {
     window.location.href = '/DepartmentList'; // This line navigates to the DepartmentList page in the browser
   }
-
 }
-
-

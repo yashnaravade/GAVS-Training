@@ -3,12 +3,13 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-department-list',
   templateUrl: './department-list.component.html',
-  styleUrls: ['./department-list.component.css']
+  styleUrls: ['./department-list.component.css'],
 })
 export class DepartmentListComponent {
-  deplist: any = [{ deptId: 'PR', deptName: 'public relations' },
-  { deptId: 'HR', deptName: 'human resource' },
-  { deptId: 'IT', deptName: 'information technology' },
+  deplist: any = [
+    { deptId: 'PR', deptName: 'public relations' },
+    { deptId: 'HR', deptName: 'human resource' },
+    { deptId: 'IT', deptName: 'information technology' },
   ];
 
   goBack() {
@@ -22,5 +23,4 @@ export class DepartmentListComponent {
   goEmployee() {
     window.location.href = '/EmployeesList'; // This line navigates to the EmployeesList page in the browser
   }
-
 }

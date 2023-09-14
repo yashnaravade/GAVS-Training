@@ -132,4 +132,3 @@ export class AppRoutingModule {}
 # Conclusion
 
 Routing is a mechanism that allows us to move between different parts of applications by clicking on buttons, links, or using the browser's back and forward buttons. Routing helps us to divide our application into multiple components. We can then load these components on demand based on the URL that the user enters in the browser's address bar. This is known as Single Page Application (SPA).
-
