@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-routing';
+
+  goDepartment() {
+    window.location.href = '/DepartmentList'; // This line navigates to the DepartmentList page in the browser
+  }
+
+  goEmployee() {
+    window.location.href = '/EmployeesList'; // This line navigates to the EmployeesList page in the browser
+  }
+  
+
 }
+
+

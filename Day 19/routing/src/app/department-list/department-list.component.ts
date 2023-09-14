@@ -11,4 +11,16 @@ export class DepartmentListComponent {
   { deptId: 'IT', deptName: 'information technology' },
   ];
 
+  goBack() {
+    window.history.back(); // This line navigates back to the previous page in the browser
+  }
+
+  goHome() {
+    window.location.href = '/'; // This line navigates to the home page in the browser
+  }
+
+  goEmployee() {
+    window.location.href = '/EmployeesList'; // This line navigates to the EmployeesList page in the browser
+  }
+
 }
