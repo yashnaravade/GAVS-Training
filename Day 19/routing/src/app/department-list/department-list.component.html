@@ -1,0 +1,11 @@
+<b>department list </b>
+<table style="display: grid; border: 3px dotted">
+  <tr>
+    <td>DepartmentId</td>
+    <td>epartmentName</td>
+  </tr>
+  <tr *ngFor="let dep of deplist">
+    <td>{{dep.deptId}}</td>
+    <td>{{dep.deptName}}</td>
+  </tr>
+</table>

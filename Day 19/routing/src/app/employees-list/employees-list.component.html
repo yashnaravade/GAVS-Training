@@ -1,0 +1,13 @@
+<b> Employees list </b>
+<table style="display: grid; border: 3px dotted">
+  <tr>
+    <td>EmployeeId</td>
+    <td>FirstName</td>
+    <td>LastName</td>
+  </tr>
+  <tr *ngFor="let emp of emplist">
+    <td>{{emp.empId}}</td>
+    <td>{{emp.firstName}}</td>
+    <td>{{emp.lastName}}</td> 
+  </tr>
+</table>
