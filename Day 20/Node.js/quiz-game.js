@@ -35,7 +35,7 @@ let questions = [
   },
   {
     question: "What is my favorite food? ",
-    answer: "Pizza",
+    answer: "Chicken",
   },
   {
     question: "What is my favorite sport? ",
@@ -59,7 +59,7 @@ let highScores = [
     score: 5,
   },
   {
-    name: "Rahul",
+    name: "Gaurav",
     score: 4,
   },
 ];
