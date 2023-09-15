@@ -10,10 +10,9 @@ const routes: Routes = [
   { path: 'DepartmentList', component: DepartmentListComponent },
   // DefaultComponent
   // if user enters any invalid URL then it will redirect to DefaultComponent
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' }, 
   { path: 'home', component: HomeComponent },
   { path: '**', component: DefaultComponent },
-
 ];
 
 @NgModule({
