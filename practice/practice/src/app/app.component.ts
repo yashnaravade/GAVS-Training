@@ -5,7 +5,9 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit, OnDestroy {
+// export class AppComponent implements OnInit, OnDestroy {
+  export class AppComponent{
+  
   // title = 'GoGo Angular';
 
   // getMin(a: number, b: number) {
@@ -16,19 +18,26 @@ export class AppComponent implements OnInit, OnDestroy {
   //   return Math.max(a, b);
   // }
 
-  intervalSubscription: any;
-  ngOnInit(): void {
-    this.intervalSubscription = setInterval(() => {
-      console.log('Hello');
-    }, 1000);
-  }
+// intervalSubscription: any;
+  // ngOnInit(): void {
+  //   this.intervalSubscription = setInterval(() => {
+  //     console.log('Hello');
+  //   }, 1000);
+  // }
+  
 
-  ngOnDestroy(): void {
-    if (this.intervalSubscription) {
-      clearInterval(this.intervalSubscription);
-    }
-  }
+  // ngOnDestroy(): void {
+  //   if (this.intervalSubscription) {
+  //     clearInterval(this.intervalSubscription);
+  //   }
+  // }`
 
+
+  showText = true;
+
+  toggleText() {
+    this.showText = !this.showText;
+  }
   
 
 }

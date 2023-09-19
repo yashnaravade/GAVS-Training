@@ -9,10 +9,17 @@ Maximum is: {{ getMax(69, 420) }} -->
 
 <!-- <app-parent></app-parent> -->
 
-<app-child>
+<!-- <app-child>
   <p>This is root</p>
   <h3 question>What's up fam?</h3>
   <p answer>Not much, just chillin'</p>
-</app-child>
+</app-child> -->
+
+<h3>
+  {{ " ‏‏‎ ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎ ‎ ‏‏‎ ‎"
+  }}{{ showText ? "This is visible" : "This is hidden" }}
+</h3>
+<br />
+<button (click)="toggleText()">Toggle</button>
 
 <router-outlet></router-outlet>

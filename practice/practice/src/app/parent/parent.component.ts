@@ -5,7 +5,7 @@ import { ChildComponent } from '../child/child.component';
   selector: 'app-parent',
   templateUrl: './parent.component.html',
   styleUrls: ['./parent.component.css'],
-   // this is the child component selector.
+  // this is the child component selector.
   // The childMessage property is bound to the string "I speak for the parent!".
   // This is the parent component template.
   // How does the child component know that it should expect a childMessage property?
@@ -29,10 +29,7 @@ export class ParentComponent {
 
   constructor() {}
 
-  ngAfterViewInit() {
-    console.log(this.child);
-  }
-
-  
-
+  // ngAfterViewInit() {
+  //   console.log(this.child);
+  // }
 }
