@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, OnInit } from '@angular/core';
+import { ChildComponent } from '../child/child.component';
 
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.css'], // this is the child component selector.
+  styleUrls: ['./parent.component.css'],
+   // this is the child component selector.
   // The childMessage property is bound to the string "I speak for the parent!".
   // This is the parent component template.
   // How does the child component know that it should expect a childMessage property?
@@ -14,12 +16,23 @@ import { Component } from '@angular/core';
   //A: Use the childMessage property in the child component's template.
 })
 export class ParentComponent {
-  parentMessage = 'message from parent';
-  childMessage = 'I speak for the parent!';
+  // parentMessage = 'message from parent';
+  // childMessage = 'I speak for the parent!';
 
-  recieveMessage(msg: string) {
-    this.childMessage = msg;
-    alert(this.childMessage);
-    console.log(this.childMessage);
+  // recieveMessage(msg: string) {
+  //   this.childMessage = msg;
+  //   alert(this.childMessage);
+  //   console.log(this.childMessage);
+  // }
+
+  @ViewChild(ChildComponent) child: any;
+
+  constructor() {}
+
+  ngAfterViewInit() {
+    console.log(this.child);
   }
+
+  
+
 }

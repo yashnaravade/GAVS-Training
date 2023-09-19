@@ -1,7 +1,8 @@
-<h2>This is child component</h2>
-
 <!-- Say {{childMessage}}
 <br>
 Say {{ parentMessage}} -->
 
-<button (click)="sendMessage()">Send Message</button>
+<!-- <button (click)="sendMessage()">Send Message</button> -->
+<p>This is child</p>
+<ng-content [question]></ng-content>
+<ng-content [answer]></ng-content>

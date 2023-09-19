@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./child.component.css'],
   template: `<p>{{ childMessage }}</p>`,
 })
-export class ChildComponent {
+export class ChildComponent implements OnInit {
   // @Input() childMessage: string | undefined;
 
   // @Input()
@@ -17,11 +17,20 @@ export class ChildComponent {
   //   console.log(this.childMessage);
   // }
 
-  @Output() messageEvent = new EventEmitter<string>();
+  // @Output() messageEvent = new EventEmitter<string>();
 
-  constructor() {}
+ 
 
-  sendMessage() {
-    this.messageEvent.emit('I speak for the child!');
-  }
+  ngOnInit() {}
+
+  // sendMessage() {
+  //   this.messageEvent.emit('I speak for the child!');
+  // }
+
+  message: string =
+    'I speak for the child! You must listen to me! The viewChild method sends me to the parent!';
+    constructor() {
+      console.log(this.message);
+    }
+  
 }
