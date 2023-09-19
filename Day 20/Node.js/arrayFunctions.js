@@ -43,7 +43,7 @@
 // Example:
 // let myArray = [1, 2, 3];
 // console.log(myArray.fill(0, 1)); // [1, 0, 0]
-// console.log(myArray.fill(1, 1, 2)); // [1, 1, 0] 
+// console.log(myArray.fill(1, 1, 2)); // [1, 1, 0]
 // In the above example, we are filling the elements from index 1 to index 2 with 1. So, the element at index 1 will be replaced with 1 and the element at index 2 will be replaced with 1. The element at index 0 will remain the same. So, the output will be [1, 1, 0].
 
 // 6. filter()
@@ -67,7 +67,7 @@
 // console.log(myArray.find((element) => element > 4)); // 5
 // console.log(myArray.find((element) => element > 5)); // undefined
 
-// In the above example, we are finding the first element that is greater than 1, 2, 3, 4, and 5. So, the output will be 2, 3, 4, 5, and undefined respectively. The output will be undefined because there is no element greater than 5. So, the find() function returns undefined.  
+// In the above example, we are finding the first element that is greater than 1, 2, 3, 4, and 5. So, the output will be 2, 3, 4, 5, and undefined respectively. The output will be undefined because there is no element greater than 5. So, the find() function returns undefined.
 
 // 8. findIndex()
 // This function returns the index of the first element in an array that pass the test implemented by the provided function.
@@ -209,7 +209,7 @@
 
 // 23. some()
 // This function checks if any of the elements in an array pass a test.
-// Syntax:  
+// Syntax:
 // array.some(function(currentValue, index, arr), thisValue)
 // Example:
 // let myArray = [1, 2, 3];
@@ -266,7 +266,3 @@
 // let myArray = [1, 2, 3];
 // console.log(myArray.valueOf()); // [1, 2, 3]
 //
-
-
-
-

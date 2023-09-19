@@ -297,3 +297,5 @@ console.log(myName.padEnd(10, "a")); // Yashaaaaaa
 
 // let myName = "Yash";
 console.log(myName.padStart(10, "a")); // aaaaaaYash
+
+
