@@ -4,7 +4,12 @@ import { Component } from '@angular/core';
   selector: 'app-property-binding',
   templateUrl: './property-binding.component.html',
   styleUrls: ['./property-binding.component.css'],
+  
 })
 export class PropertyBindingComponent {
-  imagePath = '../../../assets/bsdk.png';
+  // imagePath = '../../../assets/bsdk.png';
+  // isDisabled = false;
+  // toggleButton() {
+  //   this.isDisabled = !this.isDisabled;
+  // }
 }
