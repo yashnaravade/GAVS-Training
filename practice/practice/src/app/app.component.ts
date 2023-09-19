@@ -6,8 +6,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 // export class AppComponent implements OnInit, OnDestroy {
-  export class AppComponent{
-  
+export class AppComponent {
   // title = 'GoGo Angular';
 
   // getMin(a: number, b: number) {
@@ -18,13 +17,12 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   //   return Math.max(a, b);
   // }
 
-// intervalSubscription: any;
+  // intervalSubscription: any;
   // ngOnInit(): void {
   //   this.intervalSubscription = setInterval(() => {
   //     console.log('Hello');
   //   }, 1000);
   // }
-  
 
   // ngOnDestroy(): void {
   //   if (this.intervalSubscription) {
@@ -32,12 +30,5 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   //   }
   // }`
 
-
-  showText = true;
-
-  toggleText() {
-    this.showText = !this.showText;
-  }
-  
 
 }

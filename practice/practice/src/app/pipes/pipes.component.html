@@ -1,0 +1,74 @@
+<!-- Pipes -->
+{{ date }}
+<br />
+{{ date | date : "shortDate" }}
+<br />
+{{ date | date : "short" }}
+<br />
+{{ date | date : "medium" }}
+<br />
+{{ date | date : "long" }}
+<br />
+{{ date | date : "full" }}
+<br />
+{{ date | date : "shortTime" }}
+<br />
+{{ date | date : "mediumTime" }}
+<br />
+{{ date | date : "longTime" }}
+<br />
+{{ date | date : "fullTime" }}
+<br />
+{{ date | date : "shortDate" | uppercase }}
+<br />
+{{ date | date : "shortDate" | lowercase }}
+<br />
+{{ date | date : "shortDate" | titlecase }}
+<br />
+{{ date | date : "shortDate" | slice : 0 : 3 }}
+<br />
+{{ date | date : "shortDate" | slice : 3 : 6 }}
+<br />
+{{ date | date : "EEEE MMMM d, y" }}
+<!-- EEEE = day of the week, MMMM = month, d = day, y = year -->
+<br />
+{{ date | date : "EEEE MMMM d, y" | uppercase }}
+<br />
+<br />
+{{ 0.25 | percent }}
+<br />
+<br />
+<!-- implement custom pipe -->
+{{ "World" | greetingsPipe }}
+<!-- World is the input -->
+<!-- greetingsPipe is the pipe -->
+<!-- output is Hello World -->
+<!-- pipe is a function that takes an input and returns an output -->
+
+<!-- currency pipes -->
+<br />
+{{ 8008135 | currency }}
+<br />
+{{ 80085 | currency : "EUR" }}
+<br />
+{{ 420 | currency : "EUR" : "code" }}
+<br />
+{{ 69 | currency : "INR" : "symbol" }}
+
+<!-- number pipes -->
+
+<br />
+{{ 0.25 | percent }}
+<br />
+{{ 0.25 | percent : "2.2-2" }}
+<!-- 2.2-2 = 2 digits before decimal, 2 digits after decimal -->
+
+<!-- json pipes -->
+<br />
+{{ { name: "John", age: 69 } | json }}
+
+<!-- async pipes -->
+
+<h3>{{ promise | async }}</h3>
+<!-- promise is a variable in app.component.ts -->
+<!-- async pipe is used to display data from an asynchronous call -->
