@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -7,14 +7,21 @@ import { Component, Input } from '@angular/core';
   template: `<p>{{ childMessage }}</p>`,
 })
 export class ChildComponent {
-  @Input() childMessage: string | undefined;
+  // @Input() childMessage: string | undefined;
 
-  @Input()
-  parentMessage!: string;
+  // @Input()
+  // parentMessage!: string;
 
-  constructor() {
-    console.log(this.parentMessage);
-    console.log(this.childMessage);
+  // constructor() {
+  //   console.log(this.parentMessage);
+  //   console.log(this.childMessage);
+  // }
+
+  @Output() messageEvent = new EventEmitter<string>();
+
+  constructor() {}
+
+  sendMessage() {
+    this.messageEvent.emit('I speak for the child!');
   }
-  
 }
