@@ -8,6 +8,7 @@ import { ChildComponent } from './child/child.component';
 import { GreetingsPipePipe } from './greetings-pipe.pipe';
 import { PipesComponent } from './pipes/pipes.component';
 import { TemplateStatementComponent } from './template-statement/template-statement.component';
+import { PropertyBindingComponent } from './property-binding/property-binding.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TemplateStatementComponent } from './template-statement/template-statem
     ChildComponent,
     GreetingsPipePipe,
     PipesComponent,
-    TemplateStatementComponent
+    TemplateStatementComponent,
+    PropertyBindingComponent
   ],
   imports: [
     BrowserModule,
