@@ -152,13 +152,32 @@ import fs from "fs";
 // });
 
 // Read a Directory
-console.log("Going to read directory");
-fs.readdir("./", function (err, files) {
-  if (err) {
-    return console.error(err);
-  }
-  files.forEach(function (file) {
-    console.log(file);
-    // The fs.readdir() method takes a pathname as its first argument and a callback as its second. The callback signature is: (err, files) => {...}. After the method executes, the files parameter contains an array of all the file names in the directory.
-  });
-});
+// console.log("Going to read directory");
+// fs.readdir("./", function (err, files) {
+//   if (err) {
+//     return console.error(err);
+//   }
+//   files.forEach(function (file) {
+//     console.log(file);
+//     // The fs.readdir() method takes a pathname as its first argument and a callback as its second. The callback signature is: (err, files) => {...}. After the method executes, the files parameter contains an array of all the file names in the directory.
+//   });
+// });
+
+// Remove a Directory
+// console.log("Going to delete directory /tmp/test");
+// fs.rmdir("./test", function (err) {
+//   if (err) {
+//     return console.error(err);
+//   }
+//   console.log("Going to read directory /tmp");
+//   fs.readdir("./", function (err, files) {
+//     if (err) {
+//       return console.error(err);
+//     }
+//     files.forEach(function (file) {
+//       console.log(file);
+//     });
+//   });
+// });
+
+
