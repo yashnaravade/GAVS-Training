@@ -10,5 +10,22 @@ app.listen(3000, () => {
   console.log("Server running on port 3000");
 });
 
-// use watch mode to keep the process running
+function add(a, b) {
+  return a + b;
+}
+
+app.get("/add", (req, res) => {
+    const a = parseInt(req.query.a);
+    const b = parseInt(req.query.b);
+    const result = add(a, b);
+    res.send(result.toString());
+    console.log(req);       
+    });
+
+// ctrl + c to stop the server
+// how should the url look like to add 2 numbers?
+// localhost:3000/add?a=1&b=2
+
+// use watch mode to keep the process running 
 // node --watch index.js
+// or use nodemon 

@@ -181,3 +181,11 @@ app.use(express.static('public'));
 ```js
 app.use(express.json());
 ```
+
+### Watch mode for development
+
+The node 18.0.0 release added support for the --experimental-watch flag, which enables a file system watcher that will automatically restart the Node.js process for you when files are changed. This is a great way to develop Express.js applications. To use this feature, run the following command:
+
+```js
+node --experimental-watch app.js
+```
