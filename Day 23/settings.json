@@ -1,0 +1,232 @@
+{
+    "code-runner.executorMap": {
+      "javascript": "node",
+      "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+      "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+      "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+      "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+      "php": "php",
+      "python": "python -u",
+      "perl": "perl",
+      "perl6": "perl6",
+      "ruby": "ruby",
+      "go": "go run",
+      "lua": "lua",
+      "groovy": "groovy",
+      "powershell": "powershell -ExecutionPolicy ByPass -File",
+      "bat": "cmd /c",
+      "shellscript": "bash",
+      "fsharp": "fsi",
+      "csharp": "scriptcs",
+      "vbscript": "cscript //Nologo",
+      "typescript": "ts-node",
+      "coffeescript": "coffee",
+      "scala": "scala",
+      "swift": "swift",
+      "julia": "julia",
+      "crystal": "crystal",
+      "ocaml": "ocaml",
+      "r": "Rscript",
+      "applescript": "osascript",
+      "clojure": "lein exec",
+      "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+      "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+      "racket": "racket",
+      "scheme": "csi -script",
+      "ahk": "autohotkey",
+      "autoit": "autoit3",
+      "dart": "dart",
+      "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+      "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+      "haskell": "runhaskell",
+      "nim": "nim compile --verbosity:0 --hints:off --run",
+      "lisp": "sbcl --script",
+      "kit": "kitc --run",
+      "v": "v run",
+      "sass": "sass --style expanded",
+      "scss": "scss --style expanded",
+      "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+      "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+      "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+      "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+      "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+      "sml": "cd $dir && sml $fileName"
+    },
+    "editor.inlineSuggest.enabled": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.exclude": {
+      "**/.classpath": true,
+      "**/.project": true,
+      "**/.settings": true,
+      "**/.factorypath": true
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "security.workspace.trust.untrustedFiles": "open",
+    "bracketPairColorizer.depreciation-notice": false,
+    "github.copilot.enable": {
+      "*": true,
+      "plaintext": true,
+      "markdown": true,
+      "scminput": false,
+      "yaml": false,
+      "java": true,
+      "javascript": true,
+      "javascriptreact": true
+    },
+    "tabnine.experimentalAutoImports": true,
+    "editor.linkedEditing": true,
+    "explorer.confirmDelete": false,
+    "liveServer.settings.CustomBrowser": "chrome",
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "[java]": {
+      "editor.defaultFormatter": "redhat.java"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "json.maxItemsComputed": 10000,
+    "editor.foldingMaximumRegions": 10000,
+    "settingsSync.ignoredSettings": [
+      "editor.foldingMaximumRegions"
+    ],
+    "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.associations": {
+      "*.js": "javascript"
+    },
+    "workbench.editorAssociations": {
+      "*.docx": "default",
+      "*.zip": "default",
+      "*.png": "imagePreview.previewEditor",
+      "*.js": "default"
+    },
+    "workbench.startupEditor": "none",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "rapidapi.terminalLink.enabled": false,
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "editor.fontSize": 15,
+    "[markdown]": {
+      "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.accessibilitySupport": "off",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "npm.enableRunFromFolder": true,
+    "material-icon-theme.languages.associations": {},
+    "material-icon-theme.files.associations": {},
+    "material-icon-theme.activeIconPack": "react",
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact",
+      "typescript": "typescriptreact"
+    },
+    "liveServer.settings.donotVerifyTags": true,
+    "vscode-angular-html.angularAnimationTriggerPrefix": "#D16969",
+    "vscode-angular-html.angularBindingAttributeDelimiter": "#D16969",
+    "vscode-angular-html.angularExpression": "#D16969",
+    "vscode-angular-html.angularPrefixedAttributesRefPrefix": "#D16969",
+    "vscode-angular-html.angularSyntaxSugarAttributesPrefix": "#D16969",
+    "vscode-angular-html.angularTemplateVariablePrefix": "#D16969",
+    "vscode-angular-html.colorCustomizations": true,
+    "vscode-angular-html.dtdDoctypeQuantifier": "#D16969",
+    "vscode-angular-html.xmlAttributeNamespaceDivider": "#D16969",
+    "vscode-angular-html.xmlTagNamespaceDivider": "#D16969",
+    "editor.tokenColorCustomizations": {
+      "textMateRules": [
+        {
+          "scope": "ref.license",
+          "settings": {
+            "foreground": "#cccccc"
+          }
+        },
+        {
+          "scope": "ref.snippet",
+          "settings": {
+            "foreground": "#606060"
+          }
+        },
+        {
+          "scope": "html-template.ng.interpolation.begin",
+          "settings": {
+            "foreground": "#D16969"
+          }
+        },
+        {
+          "scope": "html-template.ng.interpolation.end",
+          "settings": {
+            "foreground": "#D16969"
+          }
+        },
+        {
+          "scope": "html-template.ng.attributes.animationtrigger.prefix",
+          "settings": {
+            "foreground": "#D16969"
+          }
+        },
+        {
+          "scope": "punctuation.definition.ng-binding-name.begin.html",
+          "settings": {
+            "foreground": "#D16969"
+          }
+        },
+        {
+          "scope": "punctuation.definition.ng-binding-name.end.html",
+          "settings": {
+            "foreground": "#D16969"
+          }
+        },
+        {
+          "scope": "html-template.ng.attributes.prefix.ref",
+          "settings": {
+            "foreground": "#D16969"
+          }
+        },
+        {
+          "scope": "html-template.ng.attributes.prefix.sugar",
+          "settings": {
+            "foreground": "#D16969"
+          }
+        },
+        {
+          "scope": "html-template.ng.attributes.template.prefix",
+          "settings": {
+            "foreground": "#D16969"
+          }
+        },
+        {
+          "scope": "html-template.ng.tag.colon",
+          "settings": {
+            "foreground": "#D16969"
+          }
+        },
+        {
+          "scope": "html-template.ng.attributes.colon",
+          "settings": {
+            "foreground": "#D16969"
+          }
+        },
+        {
+          "scope": "html-template.ng.occurrence.dtd",
+          "settings": {
+            "foreground": "#D16969"
+          }
+        }
+      ]
+    },
+    "gitlens.graph.minimap.enabled": false
+  }
