@@ -1,0 +1,20 @@
+create table Users
+(
+
+userid varchar(50) primary key,
+password varchar(25) not null,
+email varchar(109) not null unique
+);
+
+- show databases;
+- use database_name;
+- show tables;
+- describe table_name;
+- select * from table_name;
+- select column_name from table_name;
+- select column_name from table_name where condition;
+- select column_name from table_name where condition1 and condition2;
+- select column_name from table_name where condition1 or condition2;
+- select column_name from table_name where condition order by column_name;
+- select column_name from table_name where condition order by column_name desc;
+
