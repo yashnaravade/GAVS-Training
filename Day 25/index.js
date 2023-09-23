@@ -5,11 +5,11 @@ const bodyParser = require("body-parser");
 
 const app = express(); // Initialize the Express.js app
 const port = 3000; // Port number on which the application will run`
-
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 const mysql_conn = mysql.createConnection({
-  host: "127.0.0.1",
+  host: "localhost",
   user: "root",
   port: 3306,
   password: "Sandeep@77",
@@ -35,14 +35,16 @@ mysql_conn.connect((error) => {
     console.log(mysql_conn.state);
   }
 });
-
+app.get('/ap', (req, res) => {
+  res.send("helloi");
+})
 
 
 app.post("/signin", authenicate);
 
 function authenicate(request, response) {
 
-  my_sqlconn.query('select * from users', processResults);
+  mysql_conn.query('select * from users', processResults);
 
 
 
@@ -86,25 +88,46 @@ function authenicate(request, response) {
 
 
 
-app.post('/addUser', addNewUser)
+// app.post('/addUser', addNewUser)
+
+// function addNewUser(request, response) {
+
+//     var uid = request.body.userid;
+
+//     var pwd = request.body.password;
+
+//     var email = request.body.email;//request .body is for post command , request.query is for get method
+
+//     var ins = "insert into users values('" + uid + "', '" + pwd + "' ,'" + email + "')";
+
+//     console.log("Executing" + ins);//to check whether the data has been inserted or not
+
+//     my_sqlconn.query(ins)
+
+//     console.log("inserted 1 record successfully")
+
+// }
+app.post('/addUser', addNewUser);
 
 function addNewUser(request, response) {
+  const uid = request.body.userid;
+  const pwd = request.body.password;
+  const email = request.body.email;
 
-  var uid = request.body.userid;
+  const ins = "INSERT INTO users (userid, password, email) VALUES (?, ?, ?)";
+  const values = [uid, pwd, email];
 
-  var pwd = request.body.password;
-
-  var email = request.body.email;//request .body is for post command , request.query is for get method
-
-  var ins = "insert into users values('" + uid + "', '" + pwd + "' ,'" + email + "')";
-
-  console.log("Executing" + ins);//to check whether the data has been inserted or not
-
-  my_sqlconn.query(ins)
-
-  console.log("inserted 1 record successfully")
-
+  mysql_conn.query(ins, values, (error, results) => {
+    if (error) {
+      console.error("Error inserting user:", error);
+      response.status(500).json({ error: "Internal Server Error" });
+    } else {
+      console.log("Inserted 1 record successfully");
+      response.status(200).json({ message: "User added successfully" });
+    }
+  });
 }
+
 
 function processResults(error, results) {
   if (error) {
@@ -117,12 +140,12 @@ function processResults(error, results) {
   }
 }
 
-app.post("/signin", (request, response) => {
-  console.log("Authenticating");
-  mysql_conn.query("SELECT * from users", processResults);
+// app.post("/signin", (request, response) => {
+//     console.log("Authenticating");
+//     mysql_conn.query("SELECT * from users", processResults);
 
-  console.log("Server is running at http://localhost:" + port);
-});
+//     console.log("Server is running at http://localhost:" + port);
+// });
 
 
 
