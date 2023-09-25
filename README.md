@@ -1,2 +1,2 @@
 # GAVS-Training
-Gavs company training
+Gavs company training Java Fullstack
