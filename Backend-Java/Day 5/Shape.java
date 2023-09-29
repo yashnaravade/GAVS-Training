@@ -1,5 +1,5 @@
 
-public class Shape {
+public abstract class Shape {
 	public Shape() {
 		System.out.println("Shape created");
 	}
@@ -16,5 +16,5 @@ public class Shape {
 	public void setColor(String color) {
 		this.color = color;
 	}
-	// public abstract void draw();
+	public abstract void draw();
 }

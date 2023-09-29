@@ -1,14 +1,15 @@
 class Circle extends Shape{
 	
 	public Circle() {
-		// super("Blue");
+		//super("Blue");
 		System.out.println("Circle Created");
 	}
 	public Circle(String color) {
-		super(color);
+		// super();
 		System.out.println("Circle created with Color");
 	}
 	public void draw() {
+		super.draw();
 		System.out.println("Drawing a Circle");
 	}
 	// Book b=new Book();
@@ -30,7 +31,7 @@ public class AbstractDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Circle myCircle=Circle();
+		Circle myCircle=new Circle("Red");
 		myCircle.draw();
 	}
 
