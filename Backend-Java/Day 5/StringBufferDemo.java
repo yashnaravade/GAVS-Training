@@ -36,7 +36,7 @@ public class StringBufferDemo {
         sb.setLength(0);
         System.out.println(sb);//prints nothing
 
-
+        
     }
     
 }
