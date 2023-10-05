@@ -175,3 +175,4 @@ select concat(e1.first_name, ' ', e1.last_name) "Manager Name", d1.department_na
 ```sql
 select e1.first_name, e1.last_name, j1.job_title "Current Job Title", j2.job_title "Previous Job Title" from employees e1 join jobs j1 on e1.job_id = j1.job_id join jobs j2 on e1.job_id = j2.job_id;
 ```
+
