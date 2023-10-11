@@ -69,7 +69,6 @@ class Student {
     public void printNames() {
 
         Iterator<String> iterator = names.iterator();
-
         while (iterator.hasNext()) {
 
             System.out.println(iterator.next());
