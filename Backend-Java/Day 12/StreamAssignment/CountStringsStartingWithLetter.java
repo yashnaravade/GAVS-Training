@@ -9,7 +9,7 @@ public class CountStringsStartingWithLetter {
         char letterToCount = 'a';
 
         long count = strings.stream()
-                .filter(s -> s.startsWith(String.valueOf(letterToCount)))
+                .filter(s -> s.startsWith(String.valueOf(letterToCount))) // Filter strings starting with letterToCount. String.valueOf() is used to convert char to String.
                 .count();
 
         System.out.println("Number of strings starting with '" + letterToCount + "': " + count);
