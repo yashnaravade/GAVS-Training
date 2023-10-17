@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .login-container {
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+
+        .login-form {
+            background: #f2f2f2;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px #888888;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .form-group input[type="submit"] {
+            background: #007BFF;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="login-container">
+    <div class="login-form">
+        <h2>Login</h2>
+        <form action="/Johny_Johny/Gogo.jsp" method="post">
+            <div class="form-group">
+                <label for="user">Username:</label>
+                <input type="text" id="user" name="user" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
