@@ -21,7 +21,7 @@ Hibernate is an ORM (Object Relational Mapping) tool that is used to persistentl
 
 ## Hibernate Architecture
 
-![Hibernate Architecture](https://static.javatpoint.com/hibernate/images/hibernate-architecture.png)
+<img src="./hibernateArchitechture.jpg" alt="Hibernate Architecture" width="500" height="300">
 
 The Hibernate architecture includes many objects persistent object, session factory, transaction factory, connection factory, session, transaction etc. 
 The following figure shows the architecture of Hibernate:
