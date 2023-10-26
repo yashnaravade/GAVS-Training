@@ -1,3 +1,8 @@
+drop table orderline;
+drop table ordr;
+drop table stock;
+drop table salesperson
+
 
 -- SQLINES LICENSE FOR EVALUATION USE ONLY
 create table SalesPerson(SPId char(3) primary key,
