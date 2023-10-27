@@ -45,7 +45,3 @@ Assumption:
 - The software must have the provision to send request to the central drug according to the requirement.
 - The administrator must have the means to arrange the best possible means to arrange facility.
 - The software must have the provision for the daily sale of the records viewed by store seller.
-
-`		 `Page 4 of 5
-
-Pharmacy

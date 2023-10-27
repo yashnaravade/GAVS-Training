@@ -1,15 +1,144 @@
 /* Home.css */
 
 .home {
-    padding: 20px;
-  }
-  
-  .home h2 {
-    color: #0074A2;
-    text-align: center;
-  }
-  
-  .home p {
-    text-align: center;
-  }
-  
+  padding: 20px;
+}
+
+.hero {
+  background-image: url("pharma-bg.jpg"); /* Add your background image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  background-color: #333;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #005982;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.feature {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.feature h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 16px;
+}
+
+/* Additional Styles for New Sections */
+.popular-medicines {
+  text-align: center;
+  padding: 20px;
+}
+
+.medicine {
+  display: inline-block;
+  margin: 20px;
+}
+
+.medicine img {
+  max-width: 150px;
+  max-height: 150px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+
+.medicine p {
+  margin: 10px;
+}
+
+.key-features {
+  text-align: center;
+  padding: 20px;
+}
+
+.feature {
+  display: inline-block;
+  margin: 20px;
+}
+
+.feature i {
+  font-size: 36px;
+  color: #0074a2;
+}
+
+.feature p {
+  margin: 10px;
+}
+
+/* Home.css */
+
+/* ... (your existing styles) */
+
+.subscription {
+  text-align: center;
+  padding: 20px;
+}
+
+.subscription form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Center form elements vertically */
+}
+
+.subscription input[type="email"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* Expand the input field to fill the container width */
+  max-width: 300px; /* Set a maximum width for better responsiveness */
+  margin-bottom: 10px; /* Add some space between input and button */
+}
+
+.subscription button {
+  background-color: #0074A2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.subscription button:hover {
+  background-color: #005982;
+}
+
+
+/* Additional styles for the cta-button class can be reused from the original section */
