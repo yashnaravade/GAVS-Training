@@ -1,17 +1,32 @@
 // App.js
 import React from 'react';
-import Header from './Components/Header';
-import Navigation from './Components/Navigation';
-import MedicineRequestForm from './Components/MedicineRequestForm';
+import Header from './Components/Header/Header';
+import Navigation from './Components/Navigation/Navigation';
+import MedicineRequestForm from './Components/MedicineRequestForm/MedicineRequestForm';
+import Home from './Components/Home/Home';
+import SalesRecords from './Components/SalesRecords/SalesRecords';
+
+import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
+
+    <>
+
+    <Router>
       <Header />
       <Navigation />
-      <MedicineRequestForm />
-      {/* Add other components as needed */}
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/sales-records" element={<SalesRecords />} />
+        <Route path="/medicine-request-form" element={<MedicineRequestForm />} />
+      </Routes>
+    </Router>
+
+
+
+    </>
   );
 }
 

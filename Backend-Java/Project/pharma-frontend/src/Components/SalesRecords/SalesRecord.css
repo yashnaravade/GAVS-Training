@@ -1,0 +1,28 @@
+/* SalesRecords.css */
+
+.sales-records {
+    padding: 20px;
+  }
+  
+  .sales-records h2 {
+    color: #0074A2;
+    text-align: center;
+  }
+  
+  .sales-records table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+  }
+  
+  .sales-records th, .sales-records td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  .sales-records th {
+    background-color: #0074A2;
+    color: white;
+  }
+  
