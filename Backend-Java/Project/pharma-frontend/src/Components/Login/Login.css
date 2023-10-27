@@ -1,0 +1,27 @@
+/* Login.module.css */
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formGroup {
+  margin: 10px 0;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+.ctaButton {
+  background-color: #0074d9;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ctaButton:hover {
+  background-color: #0056b3;
+}

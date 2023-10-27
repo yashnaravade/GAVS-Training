@@ -20,6 +20,10 @@ const Navigation = () => {
           <li>
             <a href="/sales-records">Sales Records</a>
           </li>
+       <li>
+        <a href="/login">Login</a>
+       </li>
+
         </ul>
       </nav>
 
