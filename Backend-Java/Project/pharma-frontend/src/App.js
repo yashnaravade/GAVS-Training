@@ -6,6 +6,7 @@ import MedicineRequestForm from './Components/MedicineRequestForm/MedicineReques
 import Home from './Components/Home/Home';
 import SalesRecords from './Components/SalesRecords/SalesRecords';
 import Login from './Components/Login/Login';
+import GetStarted from './Components/GetStarted/GetStarted';
 
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -23,6 +24,7 @@ function App() {
         <Route path="/sales-records" element={<SalesRecords />} />
         <Route path="/medicine-request-form" element={<MedicineRequestForm />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/get-started" element={<GetStarted />} />
       </Routes>
     </Router>
 
