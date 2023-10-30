@@ -7,6 +7,7 @@ import Home from './Components/Home/Home';
 import SalesRecords from './Components/SalesRecords/SalesRecords';
 import Login from './Components/Login/Login';
 import GetStarted from './Components/GetStarted/GetStarted';
+import CardComponent from './Components/CardComponent/CardComponent';
 
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -25,6 +26,7 @@ function App() {
         <Route path="/medicine-request-form" element={<MedicineRequestForm />} />
         <Route path="/login" element={<Login />} />
         <Route path="/get-started" element={<GetStarted />} />
+        <Route path="/card-component" element={<CardComponent />} />
       </Routes>
     </Router>
 
