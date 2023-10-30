@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.entities.Medicine;
-import com.example.demo.entities.Order;
+
 import com.example.demo.entities.MedicineNotFoundException;
 import com.example.demo.service.MedicineService;
 
@@ -10,10 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Set;
+
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api/medicines")
 public class MedicineController {
 
@@ -21,7 +20,7 @@ public class MedicineController {
     private MedicineService medicineService;
 
     @CrossOrigin(origins = "http://localhost:3000")
-    @GetMapping("/allmedicine")
+    @GetMapping("/getmedicine")
     public List<Medicine> getAllMedicines() {
         return medicineService.getAllMedicines();
     }
@@ -36,21 +35,27 @@ public class MedicineController {
     @PostMapping("/addmedicine")
     public String addMedicine(@RequestBody Medicine medicine) {
         medicineService.addMedicine(medicine);
-        return "Medicine Added Successfully";
+        return "Medicine added successfully";
     }
-
+    
     @CrossOrigin(origins = "http://localhost:3000")
     @PutMapping("/updatemedicine/{id}")
     public String updateMedicine(@PathVariable Long id, @RequestBody Medicine medicine) throws MedicineNotFoundException {
     	medicineService.updateMedicine(id, medicine);
-    	return "Medicine Updated Successfully!";
+    	return "Medicine updated successfully";
     }
 
     @CrossOrigin(origins = "http://localhost:3000")
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/deletemedicine/{id}")
     public String deleteMedicineById(@PathVariable("id") Long id) throws MedicineNotFoundException {
         medicineService.deleteMedicine(id);
-        return "Medicine Deleted Successfully";
+        return "Medicine deleted successfully";
+    }
+    
+    @CrossOrigin(origins = "http://localhost:3000")
+    @GetMapping("/checkExpiryDates")
+    public List<Medicine> checkExpiryDates() {
+    	return medicineService.checkExpiryDates();
     }
     
 }

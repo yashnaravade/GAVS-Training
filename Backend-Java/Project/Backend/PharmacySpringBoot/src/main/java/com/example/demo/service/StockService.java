@@ -8,6 +8,8 @@ import com.example.demo.entities.MedicineNotFoundException;
 import com.example.demo.entities.Stock;
 import com.example.demo.repository.MedicineRepository;
 import com.example.demo.repository.StockRepository;
+
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -19,19 +21,6 @@ public class StockService {
 	 @Autowired
     private  MedicineRepository medicineRepository;
 	 
-    public void addMedicineToStock(Long medicineId, int quantity, Date expirationDate) throws MedicineNotFoundException {
-    	if(medicineRepository.existsById(medicineId)) {
-        Medicine medicine = medicineRepository.findById(medicineId).get();
-            Stock stock = new Stock();
-            stock.setMedicine(medicine);
-            stock.setQuantity(quantity);
-            stock.setExpirationDate(expirationDate);
-            stockRepository.save(stock);
-        }
-    	else {
-    		throw new MedicineNotFoundException("Medicine with given id not found.");
-    	}
-    }
 
     public void removeExpiredMedicine() {
         Date currentDate = new Date();
@@ -43,6 +32,9 @@ public class StockService {
     public void add(Stock stock) {
     	stockRepository.save(stock);
     	
+    }
+    public List<Stock> getAllStock() {
+        return stockRepository.findAll();
     }
     
 }

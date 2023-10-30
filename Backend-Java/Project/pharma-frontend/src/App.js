@@ -12,9 +12,11 @@ import Register from "./Components/Register/Register";
 import Footer from "./Components/Footer/Footer";
 import AddMedicine from "./Components/Medicine/AddMedicine/AddMedicine";
 import UpdateMedicine from "./Components/Medicine/UpdateMedicine/UpdateMedicine";
+import DeleteMedicine from "./Components/Medicine/DeleteMedicine/DeleteMedicine";
+import ReadMedicine from "./Components/Medicine/ReadMedicine/ReadMedicine";
 
 
-import "./App.css";
+// import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -37,6 +39,8 @@ function App() {
           <Route path="/footer" element={<Footer />} />
           <Route path="/add-medicine" element={<AddMedicine />} />
           <Route path="/update-medicine" element={<UpdateMedicine />} />
+          <Route path="/delete-medicine" element={< DeleteMedicine />} />
+          <Route path="/read-medicine" element={<ReadMedicine />} />
 
         </Routes>
       </Router>

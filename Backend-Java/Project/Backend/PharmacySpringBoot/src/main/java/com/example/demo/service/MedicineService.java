@@ -44,32 +44,29 @@ public class MedicineService {
         }
         
         }
-        int count =0;
-    public List<Medicine> checkExpiryDates() {
-        List<Medicine> allMedicines = (List<Medicine>) medicineRepository.findAll();
-        Date currentDate = new Date();
-        List<Medicine> expiredMedicines = new ArrayList<>();
-        List<Medicine> validMedicines = new ArrayList<>();
+      
+        public List<Medicine> checkExpiryDates() {
+            List<Medicine> allMedicines = medicineRepository.findAll();
+            Date currentDate = new Date();
+            List<Medicine> expiredMedicines = new ArrayList<>();
 
-        for (Medicine medicine : allMedicines) {
-            if (medicine.getExpiryDate() != null) {
-                if (medicine.getExpiryDate().before(currentDate)) {
+            for (Medicine medicine : allMedicines) {
+                if (medicine.getExpiryDate() != null && medicine.getExpiryDate().before(currentDate)) {
                     expiredMedicines.add(medicine);
-                    count++;
-                } else {
-                    validMedicines.add(medicine);
                 }
             }
+
+            return expiredMedicines;
         }
 
-        return expiredMedicines; 
-    }
         
     public void deleteMedicine(Long id) {
         Medicine medicine = medicineRepository.findById(id).get();
         System.out.println(medicine);
         medicineRepository.deleteById(id);    
     }
+
+	
     
 }
     

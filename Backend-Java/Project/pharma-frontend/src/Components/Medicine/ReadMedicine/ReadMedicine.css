@@ -1,0 +1,38 @@
+.medicine-list {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .medicine-list h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th,
+  table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  table th {
+    background-color: #0074d9; /* Header background color */
+    color: #fff;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate row background color */
+  }
+  
+  table tr:hover {
+    background-color: #d0ebff; /* Row hover background color */
+  }
+  
+  /* Add more styles as needed for customization */
+  

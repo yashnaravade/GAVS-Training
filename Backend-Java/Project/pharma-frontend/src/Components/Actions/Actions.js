@@ -6,7 +6,8 @@ import "./CardComponent.css";
 const Actions = () => {
   return (
     <div className="card-container">
-      <Link to="/add-to-stock" className="card-link">
+
+      <Link to="/add-medicine" className="card-link">
         <div className="card">
           <i className="fa fa-plus-circle card-icon" aria-hidden="true"></i>
           <p className="card-text">Add to Stock</p>
@@ -16,7 +17,7 @@ const Actions = () => {
         </div>
       </Link>
 
-      <Link to="/remove-from-stock" className="card-link">
+      <Link to="/delete-medicine" className="card-link">
         <div className="card">
           <i className="fa fa-minus-circle card-icon" aria-hidden="true"></i>
           <p className="card-text">Remove from Stock</p>
@@ -25,6 +26,24 @@ const Actions = () => {
           </p>
         </div>
       </Link>
+
+
+      <Link to="/update-medicine" className="card-link">
+        <div className="card">
+          <i className="fa fa-pencil-square-o card-icon" aria-hidden="true"></i>
+          <p className="card-text">Update Medicine</p>
+          <p className="card-description">Update medicine.</p>
+        </div>
+      </Link>
+
+      <Link to="/read-medicine" className="card-link">
+        <div className="card">
+          <i className="fa fa-eye card-icon" aria-hidden="true"></i>
+          <p className="card-text">View Stock</p>
+          <p className="card-description">View your medicine stock inventory.</p>
+        </div>
+      </Link>
+
 
       <Link to="/add-to-order" className="card-link">
         <div className="card">
@@ -80,27 +99,12 @@ const Actions = () => {
         </div>
       </Link>
 
-      <Link to="/view-stock" className="card-link">
-        <div className="card">
-          <i className="fa fa-eye card-icon" aria-hidden="true"></i>
-          <p className="card-text">View Stock</p>
-          <p className="card-description">View your stock inventory.</p>
-        </div>
-      </Link>
-
+  
       <Link to="/view-orders" className="card-link">
         <div className="card">
           <i className="fa fa-eye card-icon" aria-hidden="true"></i>
           <p className="card-text">View Orders</p>
           <p className="card-description">View your order list.</p>
-        </div>
-      </Link>
-
-      <Link to="/add-medicine" className="card-link">
-        <div className="card">
-          <i className="fa fa-plus-circle card-icon" aria-hidden="true"></i>
-          <p className="card-text">Add Medicine</p>
-          <p className="card-description">Add new medicine to the database.</p>
         </div>
       </Link>
 
@@ -152,13 +156,6 @@ const Actions = () => {
         </div>
       </Link>
 
-      <Link to="/all-medicine" className="card-link">
-        <div className="card">
-          <i className="fa fa-eye card-icon" aria-hidden="true"></i>
-          <p className="card-text">View All Medicine</p>
-          <p className="card-description">View all medicine.</p>
-        </div>
-      </Link>
 
       <Link to="/medicinebyid" className="card-link">
         <div className="card">
@@ -168,13 +165,6 @@ const Actions = () => {
         </div>
       </Link>
 
-      <Link to="/update-medicine" className="card-link">
-        <div className="card">
-          <i className="fa fa-pencil-square-o card-icon" aria-hidden="true"></i>
-          <p className="card-text">Update Medicine</p>
-          <p className="card-description">Update medicine.</p>
-        </div>
-      </Link>
 
       <br />
       <Footer />
