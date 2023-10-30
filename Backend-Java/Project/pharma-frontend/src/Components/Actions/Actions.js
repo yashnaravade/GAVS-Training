@@ -1,15 +1,18 @@
 import React from "react";
-import { Link } from 'react-router-dom'; // Import Link from React Router
+import { Link } from "react-router-dom"; // Import Link from React Router
+import Footer from "../Footer/Footer";
 import "./CardComponent.css";
 
-const CardComponent = () => {
+const Actions = () => {
   return (
     <div className="card-container">
       <Link to="/add-to-stock" className="card-link">
         <div className="card">
           <i className="fa fa-plus-circle card-icon" aria-hidden="true"></i>
           <p className="card-text">Add to Stock</p>
-          <p className="card-description">Add new medicines to your stock inventory.</p>
+          <p className="card-description">
+            Add new medicines to your stock inventory.
+          </p>
         </div>
       </Link>
 
@@ -17,7 +20,9 @@ const CardComponent = () => {
         <div className="card">
           <i className="fa fa-minus-circle card-icon" aria-hidden="true"></i>
           <p className="card-text">Remove from Stock</p>
-          <p className="card-description">Remove medicines from your stock inventory.</p>
+          <p className="card-description">
+            Remove medicines from your stock inventory.
+          </p>
         </div>
       </Link>
 
@@ -33,7 +38,9 @@ const CardComponent = () => {
         <div className="card">
           <i className="fa fa-cart-arrow-down card-icon" aria-hidden="true"></i>
           <p className="card-text">Remove from Order</p>
-          <p className="card-description">Remove medicines from your order list.</p>
+          <p className="card-description">
+            Remove medicines from your order list.
+          </p>
         </div>
       </Link>
 
@@ -49,7 +56,9 @@ const CardComponent = () => {
         <div className="card">
           <i className="fa fa-money card-icon" aria-hidden="true"></i>
           <p className="card-text">View Total</p>
-          <p className="card-description">View the total amount for your orders.</p>
+          <p className="card-description">
+            View the total amount for your orders.
+          </p>
         </div>
       </Link>
 
@@ -65,11 +74,15 @@ const CardComponent = () => {
         <div className="card">
           <i className="fa fa-medkit card-icon" aria-hidden="true"></i>
           <p className="card-text">Medicine Requests</p>
-          <p className="card-description">Form to submit and manage medicine requests.</p>
+          <p className="card-description">
+            Form to submit and manage medicine requests.
+          </p>
         </div>
       </Link>
+      <br />
+      <Footer />
     </div>
   );
 };
 
-export default CardComponent;
+export default Actions;

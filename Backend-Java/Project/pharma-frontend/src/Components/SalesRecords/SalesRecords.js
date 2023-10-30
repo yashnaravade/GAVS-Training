@@ -1,5 +1,6 @@
 import React from 'react';
 import './SalesRecord.css';
+import Footer from '../Footer/Footer';
 
 const SalesRecords = () => {
   const dummySalesData = [
@@ -32,6 +33,8 @@ const SalesRecords = () => {
           ))}
         </tbody>
       </table>
+      <br />
+      <Footer />
     </div>
   );
 };

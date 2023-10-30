@@ -18,7 +18,7 @@ const Navigation = () => {
           <Link to="/login">Login</Link>
         </li>
         <li>
-          <Link to="/card-component">Actions</Link>
+          <Link to="/Actions">Actions</Link>
         </li>
       </ul>
     </nav>
