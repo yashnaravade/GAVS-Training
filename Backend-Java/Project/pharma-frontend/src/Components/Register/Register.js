@@ -38,6 +38,7 @@ const Register = () => {
       } else {
         console.log("Registration failed. Please check your information."); // Handle registration errors
       alert("Registration failed. Please check your information.");
+      
     }
     } catch (error) {
       console.error("An error occurred:", error);

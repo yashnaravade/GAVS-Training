@@ -1,0 +1,72 @@
+/* UpdateMedicine.css */
+
+.add-medicine {
+  /* Use a flexbox layout to center the form */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-heading{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #0074a2;
+}
+
+
+.form-heading {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #0074a2;
+}
+
+form {
+  /* Use a fixed width and height for the form */
+  width: 600px;
+  /* Add some padding and margin */
+  padding: 20px;
+  margin: 10px;
+  /* Add a border and a box shadow */
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  /* Use a custom font and color for the heading */
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  color: #333;
+}
+
+.form-group {
+  /* Use a flexbox layout to align the label and input */
+  display: flex;
+  align-items: center;
+}
+
+label {
+  /* Use a fixed width and margin for the label */
+  width: 160px;
+  margin-right: 10px;
+}
+
+input {
+  /* Use a flexible width and height for the input */
+  flex: 1;
+  height: 30px;
+}
+
+.cta-button {
+  /* Use a custom background color and border for the button */
+  background-color: #4caf50;
+  border: none;
+}
+
+.cta-button:hover {
+  /* Add a hover effect for the button */
+  background-color: #3c9f40;
+}

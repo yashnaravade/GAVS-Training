@@ -62,14 +62,6 @@ const Actions = () => {
         </div>
       </Link>
 
-      <Link to="/fetch-and-view-movies" className="card-link">
-        <div className="card">
-          <i className="fa fa-list card-icon" aria-hidden="true"></i>
-          <p className="card-text">Fetch and View Movies</p>
-          <p className="card-description">Browse and watch movies online.</p>
-        </div>
-      </Link>
-
       <Link to="/medicine-request-form" className="card-link">
         <div className="card">
           <i className="fa fa-medkit card-icon" aria-hidden="true"></i>
@@ -79,6 +71,111 @@ const Actions = () => {
           </p>
         </div>
       </Link>
+
+      <Link to="/sales-records" className="card-link">
+        <div className="card">
+          <i className="fa fa-book card-icon" aria-hidden="true"></i>
+          <p className="card-text">Sales Records</p>
+          <p className="card-description">View your sales records.</p>
+        </div>
+      </Link>
+
+      <Link to="/view-stock" className="card-link">
+        <div className="card">
+          <i className="fa fa-eye card-icon" aria-hidden="true"></i>
+          <p className="card-text">View Stock</p>
+          <p className="card-description">View your stock inventory.</p>
+        </div>
+      </Link>
+
+      <Link to="/view-orders" className="card-link">
+        <div className="card">
+          <i className="fa fa-eye card-icon" aria-hidden="true"></i>
+          <p className="card-text">View Orders</p>
+          <p className="card-description">View your order list.</p>
+        </div>
+      </Link>
+
+      <Link to="/add-medicine" className="card-link">
+        <div className="card">
+          <i className="fa fa-plus-circle card-icon" aria-hidden="true"></i>
+          <p className="card-text">Add Medicine</p>
+          <p className="card-description">Add new medicine to the database.</p>
+        </div>
+      </Link>
+
+      <Link to="/remove-medicine" className="card-link">
+        <div className="card">
+          <i className="fa fa-minus-circle card-icon" aria-hidden="true"></i>
+          <p className="card-text">Remove Medicine</p>
+          <p className="card-description">Remove medicine from the database.</p>
+        </div>
+      </Link>
+
+      <Link to="/add-customer" className="card-link">
+        <div className="card">
+          <i className="fa fa-user-plus card-icon" aria-hidden="true"></i>
+          <p className="card-text">Add Customer</p>
+          <p className="card-description">Add new customer to the database.</p>
+        </div>
+      </Link>
+
+      <Link to="/update-order-by-id" className="card-link">
+        <div className="card">
+          <i className="fa fa-pencil-square-o card-icon" aria-hidden="true"></i>
+          <p className="card-text">Update Order</p>
+          <p className="card-description">Update an order by its ID.</p>
+        </div>
+      </Link>
+
+      <Link to="/order-by-id" className="card-link">
+        <div className="card">
+          <i className="fa fa-search card-icon" aria-hidden="true"></i>
+          <p className="card-text">Search Order</p>
+          <p className="card-description">Search an order by its ID.</p>
+        </div>
+      </Link>
+
+      <Link to="/remove-medicine-from-order" className="card-link">
+        <div className="card">
+          <i className="fa fa-cart-arrow-down card-icon" aria-hidden="true"></i>
+          <p className="card-text">Remove Medicine from Order</p>
+          <p className="card-description">Remove medicine from an order.</p>
+        </div>
+      </Link>
+
+      <Link to="/enroll-medicine-order" className="card-link">
+        <div className="card">
+          <i className="fa fa-check-square-o card-icon" aria-hidden="true"></i>
+          <p className="card-text">Enroll Medicine Order</p>
+          <p className="card-description">Enroll medicine order.</p>
+        </div>
+      </Link>
+
+      <Link to="/all-medicine" className="card-link">
+        <div className="card">
+          <i className="fa fa-eye card-icon" aria-hidden="true"></i>
+          <p className="card-text">View All Medicine</p>
+          <p className="card-description">View all medicine.</p>
+        </div>
+      </Link>
+
+      <Link to="/medicinebyid" className="card-link">
+        <div className="card">
+          <i className="fa fa-search card-icon" aria-hidden="true"></i>
+          <p className="card-text">Search Medicine</p>
+          <p className="card-description">Search medicine by ID.</p>
+        </div>
+      </Link>
+
+      <Link to="/update-medicine" className="card-link">
+        <div className="card">
+          <i className="fa fa-pencil-square-o card-icon" aria-hidden="true"></i>
+          <p className="card-text">Update Medicine</p>
+          <p className="card-description">Update medicine.</p>
+        </div>
+      </Link>
+
       <br />
       <Footer />
     </div>

@@ -13,36 +13,44 @@ import java.util.List;
 import java.util.Set;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api/medicines")
 public class MedicineController {
 
     @Autowired
     private MedicineService medicineService;
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/allmedicine")
     public List<Medicine> getAllMedicines() {
         return medicineService.getAllMedicines();
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/medicineid/{id}")
     public Medicine getMedicineById(@PathVariable Long id) throws MedicineNotFoundException {
         return medicineService.getMedicineById(id);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/addmedicine")
-    public void addMedicine(@RequestBody Medicine medicine) {
+    public String addMedicine(@RequestBody Medicine medicine) {
         medicineService.addMedicine(medicine);
+        return "Medicine Added Successfully";
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @PutMapping("/updatemedicine/{id}")
-    public void updateMedicine(@PathVariable Long id, @RequestBody Medicine medicine) throws MedicineNotFoundException {
+    public String updateMedicine(@PathVariable Long id, @RequestBody Medicine medicine) throws MedicineNotFoundException {
     	medicineService.updateMedicine(id, medicine);
+    	return "Medicine Updated Successfully!";
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @DeleteMapping("/delete/{id}")
     public String deleteMedicineById(@PathVariable("id") Long id) throws MedicineNotFoundException {
         medicineService.deleteMedicine(id);
-        return "deleted";
+        return "Medicine Deleted Successfully";
     }
     
 }
