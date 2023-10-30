@@ -61,11 +61,11 @@ const CardComponent = () => {
         </div>
       </Link>
 
-      <Link to="/medicine-requests" className="card-link">
+      <Link to="/medicine-request-form" className="card-link">
         <div className="card">
           <i className="fa fa-medkit card-icon" aria-hidden="true"></i>
           <p className="card-text">Medicine Requests</p>
-          <p className="card-description">Submit and manage medicine requests.</p>
+          <p className="card-description">Form to submit and manage medicine requests.</p>
         </div>
       </Link>
     </div>
