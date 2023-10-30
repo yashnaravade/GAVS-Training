@@ -18,6 +18,18 @@
   margin-bottom: 20px;
 }
 
+.get-started-btn {
+  background-color: #333;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
 .hero p {
   font-size: 18px;
   margin-bottom: 40px;
@@ -101,20 +113,23 @@
   margin: 10px;
 }
 
-/* Home.css */
-
-/* ... (your existing styles) */
-
-.subscription {
-  text-align: center;
-  padding: 20px;
+.h2-heading-home{
+  color: #0074A2;
 }
 
-.subscription form {
+.subscription-form {
+  text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column; /* Center form elements vertically */
+  height: 70vh; /* Adjust the height as needed */
+}
+
+.subscription-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .subscription input[type="email"] {
@@ -126,8 +141,18 @@
   margin-bottom: 10px; /* Add some space between input and button */
 }
 
-.subscription button {
+.cta-button-home{
   background-color: #0074A2;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.subscription button {
+  background-color: #0074a2;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -139,6 +164,5 @@
 .subscription button:hover {
   background-color: #005982;
 }
-
 
 /* Additional styles for the cta-button class can be reused from the original section */

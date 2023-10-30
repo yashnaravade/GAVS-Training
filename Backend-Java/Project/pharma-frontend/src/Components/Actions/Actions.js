@@ -6,7 +6,6 @@ import "./CardComponent.css";
 const Actions = () => {
   return (
     <div className="card-container">
-
       <Link to="/add-medicine" className="card-link">
         <div className="card">
           <i className="fa fa-plus-circle card-icon" aria-hidden="true"></i>
@@ -27,7 +26,6 @@ const Actions = () => {
         </div>
       </Link>
 
-
       <Link to="/update-medicine" className="card-link">
         <div className="card">
           <i className="fa fa-pencil-square-o card-icon" aria-hidden="true"></i>
@@ -40,10 +38,22 @@ const Actions = () => {
         <div className="card">
           <i className="fa fa-eye card-icon" aria-hidden="true"></i>
           <p className="card-text">View Stock</p>
-          <p className="card-description">View your medicine stock inventory.</p>
+          <p className="card-description">
+            View your medicine stock inventory.
+          </p>
         </div>
       </Link>
 
+      <Link to="/check-and-delete-expired-medicines" className="card-link">
+        <div className="card">
+          <i className="fa fa-trash card-icon" aria-hidden="true"></i>
+          <p className="card-text">Check and Delete Expired Medicines</p>
+          <p className="card-description">
+            Check and delete expired medicines.
+          </p>
+        </div>
+      </Link>
+      
 
       <Link to="/add-to-order" className="card-link">
         <div className="card">
@@ -68,6 +78,14 @@ const Actions = () => {
           <i className="fa fa-shopping-cart card-icon" aria-hidden="true"></i>
           <p className="card-text">View Cart</p>
           <p className="card-description">View your shopping cart.</p>
+        </div>
+      </Link>
+
+      <Link to="/view-orders" className="card-link">
+        <div className="card">
+          <i className="fa fa-eye card-icon" aria-hidden="true"></i>
+          <p className="card-text">View Orders</p>
+          <p className="card-description">View your order list.</p>
         </div>
       </Link>
 
@@ -96,23 +114,6 @@ const Actions = () => {
           <i className="fa fa-book card-icon" aria-hidden="true"></i>
           <p className="card-text">Sales Records</p>
           <p className="card-description">View your sales records.</p>
-        </div>
-      </Link>
-
-  
-      <Link to="/view-orders" className="card-link">
-        <div className="card">
-          <i className="fa fa-eye card-icon" aria-hidden="true"></i>
-          <p className="card-text">View Orders</p>
-          <p className="card-description">View your order list.</p>
-        </div>
-      </Link>
-
-      <Link to="/remove-medicine" className="card-link">
-        <div className="card">
-          <i className="fa fa-minus-circle card-icon" aria-hidden="true"></i>
-          <p className="card-text">Remove Medicine</p>
-          <p className="card-description">Remove medicine from the database.</p>
         </div>
       </Link>
 
@@ -156,7 +157,6 @@ const Actions = () => {
         </div>
       </Link>
 
-
       <Link to="/medicinebyid" className="card-link">
         <div className="card">
           <i className="fa fa-search card-icon" aria-hidden="true"></i>
@@ -164,7 +164,6 @@ const Actions = () => {
           <p className="card-description">Search medicine by ID.</p>
         </div>
       </Link>
-
 
       <br />
       <Footer />

@@ -14,6 +14,7 @@ import AddMedicine from "./Components/Medicine/AddMedicine/AddMedicine";
 import UpdateMedicine from "./Components/Medicine/UpdateMedicine/UpdateMedicine";
 import DeleteMedicine from "./Components/Medicine/DeleteMedicine/DeleteMedicine";
 import ReadMedicine from "./Components/Medicine/ReadMedicine/ReadMedicine";
+import CheckAndDeleteExpiredMedicines from "./Components/Medicine/CheckAndDeleteExpiredMedicines/CheckAndDeleteExpiredMedicines";
 
 
 // import "./App.css";
@@ -41,6 +42,10 @@ function App() {
           <Route path="/update-medicine" element={<UpdateMedicine />} />
           <Route path="/delete-medicine" element={< DeleteMedicine />} />
           <Route path="/read-medicine" element={<ReadMedicine />} />
+          <Route
+            path="/check-and-delete-expired-medicines"
+            element={<CheckAndDeleteExpiredMedicines />}
+          />
 
         </Routes>
       </Router>
