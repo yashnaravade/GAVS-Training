@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Register.css";
+import axios from "axios";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -17,11 +18,32 @@ const Register = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add your registration logic here
-    console.log(formData); // Replace this with your registration API call
+    try {
+      // Define the registration data from your state
+      const registrationData = {
+        username: formData.username,
+        email: formData.email,
+        password: formData.password,
+        // You can add more fields as needed
+      };
+  
+      // Send a POST request to your backend API
+      const response = await axios.post("http://localhost:6969/register", registrationData);
+  
+      if (response.status === 200) {
+        console.log("Registration successful"); // You can handle success as needed
+       alert("Registration successful for " + formData.username);
+      } else {
+        console.log("Registration failed. Please check your information."); // Handle registration errors
+      alert("Registration failed. Please check your information.");
+    }
+    } catch (error) {
+      console.error("An error occurred:", error);
+    }
   };
+  
 
   return (
     <div className="register-container">

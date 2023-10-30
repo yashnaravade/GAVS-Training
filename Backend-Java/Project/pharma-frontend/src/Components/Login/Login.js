@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
+import "./Login.css";
 import axios from "axios";
 
 const Login = () => {
@@ -62,14 +63,15 @@ const Login = () => {
         <button type="submit" className="cta-button">
           Login
         </button>
-        
-      <p>
-        Don't have an account? <Link to="/register">Register</Link>
-      </p>
-      </form>
 
-      {/* Display the login status */}
-      {loginStatus && <p>{loginStatus}</p>}
+        <p>
+          Don't have an account? <Link to="/register">Register</Link>
+        </p>
+
+        {/* Display the login status */}
+
+        {loginStatus && <p className="login-status">{loginStatus}</p>}
+      </form>
 
       <br />
       <Footer />
