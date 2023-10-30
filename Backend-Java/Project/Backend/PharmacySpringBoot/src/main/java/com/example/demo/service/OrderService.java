@@ -7,6 +7,7 @@ import com.example.demo.repository.OrderRepository;
 import jakarta.transaction.Transactional;
 import com.example.demo.repository.MedicineRepository;
 
+import java.util.List;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -65,11 +66,24 @@ public class OrderService {
             orderRepository.save(orderOptional);
             medicineRepository.save(medicineOptional);
     }
-    @Transactional
-    public Set<Medicine> getMedicineByOrder(Long orderId) throws  OrderNotFoundException {
-        Order order = orderRepository.findById(orderId).orElseThrow(() -> new OrderNotFoundException("Order not found"));
-            return order.getMedicines();
-        
+   
+    public Order enrollMedicineInOrder(Long orderId) throws MedicineNotFoundException, OrderNotFoundException {
+       // Medicine medicine = medicineRepository.findById(medicineId)
+         //                                 .orElseThrow(() -> new MedicineNotFoundException("Medicine not found"));
+        Order order = orderRepository.findById(orderId)
+                                       .orElseThrow(() -> new OrderNotFoundException("Order not found"));
+        System.out.println(order);
+        Set<Medicine> medicines=order.getMedicines();
+        medicines.forEach(System.out::println);
+        return order;
+        //Set<Medicine> medicines=order.getMedicines();
+      //  medicine.getOrders().add(order);
+        //order.getMedicines().add(medicine);
+
+        //medicineRepository.save(medicine);
+        //orderRepository.save(order);
+       // return order;
     }
+    
 }
 

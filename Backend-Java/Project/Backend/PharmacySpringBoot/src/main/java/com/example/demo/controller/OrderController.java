@@ -59,8 +59,14 @@ public class OrderController {
         orderService.removeMedicineFromOrder(orderId, medicineId);
     }
     @GetMapping("/medicines/{orderId}")
-    public Set<Medicine> getMedicineByOrder(@PathVariable Long orderId) throws OrderNotFoundException {
-        return orderService.getMedicineByOrder(orderId);
+    public Set<Medicine> enrollMedicineInOrder(@PathVariable Long orderId ) throws OrderNotFoundException, MedicineNotFoundException {
+       Order ord= orderService.enrollMedicineInOrder(orderId);
+       System.out.println(ord);
+       Set<Medicine> medicines= ord.getMedicines();
+       medicines.forEach(System.out::println);
+       return medicines;
     }
+   
+    
 }
 

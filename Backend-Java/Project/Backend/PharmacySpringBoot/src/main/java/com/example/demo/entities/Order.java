@@ -3,6 +3,9 @@ package com.example.demo.entities;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,6 +26,7 @@ public class Order {
     private Date orderDate;
 
     @ManyToMany(mappedBy = "orderss")
+    @JsonIgnore
     private Set<Medicine> medicines = new HashSet<>();
     public Order() {
     }

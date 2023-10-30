@@ -10,6 +10,8 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -42,8 +44,26 @@ public class MedicineService {
         }
         
         }
-        
-        
+        int count =0;
+    public List<Medicine> checkExpiryDates() {
+        List<Medicine> allMedicines = (List<Medicine>) medicineRepository.findAll();
+        Date currentDate = new Date();
+        List<Medicine> expiredMedicines = new ArrayList<>();
+        List<Medicine> validMedicines = new ArrayList<>();
+
+        for (Medicine medicine : allMedicines) {
+            if (medicine.getExpiryDate() != null) {
+                if (medicine.getExpiryDate().before(currentDate)) {
+                    expiredMedicines.add(medicine);
+                    count++;
+                } else {
+                    validMedicines.add(medicine);
+                }
+            }
+        }
+
+        return expiredMedicines; 
+    }
         
     public void deleteMedicine(Long id) {
         Medicine medicine = medicineRepository.findById(id).get();
