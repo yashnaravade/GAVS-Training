@@ -1,0 +1,79 @@
+/* Style the main container */
+.get-started {
+    text-align: center;
+    padding: 30px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the main heading */
+  .get-started h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Style the introductory paragraph */
+  .get-started p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  /* Style the key features section */
+  .get-started h3 {
+    font-size: 24px;
+    margin-top: 30px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .feature {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0;
+  }
+  
+  .icon {
+    font-size: 40px;
+    margin-right: 20px;
+    color: #007BFF;
+  }
+  
+  /* Style the how to get started section */
+  .get-started ol {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* Style the images section */
+  .images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .images img {
+    max-width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .images img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Style the closing paragraph */
+  .get-started p:last-child {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #666;
+  }
+  
