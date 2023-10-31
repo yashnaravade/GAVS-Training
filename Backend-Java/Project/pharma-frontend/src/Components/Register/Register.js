@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Register.css";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -20,31 +21,54 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (formData.password !== formData.confirmPassword) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Passwords do not match!",
+      });
+      return;
+    }
+
     try {
-      // Define the registration data from your state
+      // Extract registration data from the form data
       const registrationData = {
         username: formData.username,
         email: formData.email,
         password: formData.password,
-        // You can add more fields as needed
       };
-  
-      // Send a POST request to your backend API
-      const response = await axios.post("http://localhost:6969/register", registrationData);
-  
+
+      // Send a POST request to your backend API for registration
+      const response = await axios.post(
+        "http://localhost:6969/register",
+        registrationData
+      );
+
       if (response.status === 200) {
-        console.log("Registration successful"); // You can handle success as needed
-       alert("Registration successful for " + formData.username);
+        console.log("Registration successful");
+        Swal.fire({
+          icon: "success",
+          title: "Registration successful!",
+          text: "You may now login.",
+        });
       } else {
-        console.log("Registration failed. Please check your information."); // Handle registration errors
-      alert("Registration failed. Please check your information.");
-      
-    }
+        console.log("Registration failed. Please check your information.");
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Registration failed. Please check your information.",
+        });
+      }
     } catch (error) {
       console.error("An error occurred:", error);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Registration failed. Please check your information.",
+      });
     }
   };
-  
 
   return (
     <div className="register-container">

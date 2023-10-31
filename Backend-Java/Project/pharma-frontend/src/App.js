@@ -15,7 +15,8 @@ import UpdateMedicine from "./Components/Medicine/UpdateMedicine/UpdateMedicine"
 import DeleteMedicine from "./Components/Medicine/DeleteMedicine/DeleteMedicine";
 import ReadMedicine from "./Components/Medicine/ReadMedicine/ReadMedicine";
 import CheckAndDeleteExpiredMedicines from "./Components/Medicine/CheckAndDeleteExpiredMedicines/CheckAndDeleteExpiredMedicines";
-
+import AdminHome from "./Components/Actions/Admin/Admin";
+import Staff from "./Components/Actions/Staff/Staff";
 
 // import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -46,6 +47,8 @@ function App() {
             path="/check-and-delete-expired-medicines"
             element={<CheckAndDeleteExpiredMedicines />}
           />
+          <Route path="/admin-home" element={<AdminHome />} />
+          <Route path="/staff-home" element={<Staff />} />
 
         </Routes>
       </Router>

@@ -1,0 +1,48 @@
+/* CardComponent.css */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin: 20px;
+  }
+  
+  .card {
+    text-align: center;
+    background-color: #0074A2;
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+    width: 220px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    min-height: 140px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .card-description {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* Remove default link styling and make the whole card clickable */
+  .card-link {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+  }
+  

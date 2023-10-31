@@ -3,3 +3,13 @@
   margin: 10px 0;
   color: red; 
 }
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+/* bring login container in center */

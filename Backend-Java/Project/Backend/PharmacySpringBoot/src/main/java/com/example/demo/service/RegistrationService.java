@@ -11,11 +11,12 @@ public class RegistrationService {
     @Autowired
     private UserRepository userRepository;
 
-    public User register(UserRegistrationRequest registrationRequest) {
+    public User register(User registrationRequest) {
         User newUser = new User();
         newUser.setUsername(registrationRequest.getUsername());
         newUser.setPassword(registrationRequest.getPassword());
         newUser.setEmail(registrationRequest.getEmail());
+        newUser.setRole(registrationRequest.getRole());
 
         // Save the user to the database
         userRepository.save(newUser);
