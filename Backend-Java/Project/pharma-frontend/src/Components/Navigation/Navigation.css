@@ -23,10 +23,15 @@ nav a {
 }
 
 .logout-button {
-  background-color: #ff3333; /* Red background color */
+  background-color: #9a2248; /* Red background color */
   color: white;
   border: none;
   padding: 5px 10px;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.logout-button:hover {
+  background-color: #005982;
+  transform: scale(1.1);
 }

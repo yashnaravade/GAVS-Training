@@ -124,7 +124,7 @@ const UpdateMedicine = () => {
             onChange={handleChange}
           />
         </div>
-        <button type="submit" className="cta-button">
+        <button type="submit" className="cta-button update-button">
           Update Medicine
         </button>
       </form>

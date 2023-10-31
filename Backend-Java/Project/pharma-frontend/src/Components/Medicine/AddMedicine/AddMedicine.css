@@ -70,3 +70,7 @@ input {
   /* Add a hover effect for the button */
   background-color: #3c9f40;
 }
+
+.add-button{
+  background-color: #005982 !important;
+}

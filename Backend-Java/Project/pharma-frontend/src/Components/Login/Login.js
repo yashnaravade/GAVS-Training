@@ -115,7 +115,7 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button type="submit" className="cta-button">
+          <button type="submit" className="cta-button login-btn">
             Login
           </button>
           <p>
